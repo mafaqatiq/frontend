@@ -16,9 +16,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Afaq",
-  description: "Muhammad Afaq Portfolio Webiste",
+  title: "Muhammad Afaq | Portfolio",
+  description: "Check out my work, projects, and experience.",
+  openGraph: {
+    title: "Muhammad Afaq | Portfolio",
+    description: "Check out my work, projects, and experience.",
+    url: "https://muhammad-afaq.vercel.app/",
+    type: "website",
+    images: [
+      {
+        url: "https://muhammad-afaq.vercel.app/preview.PNG", // Full URL to your image
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Afaq Portfolio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muhammad Afaq | Portfolio",
+    description: "Check out my work, projects, and experience.",
+    images: ["https://muhammad-afaq.vercel.app/preview.jpg"], // Full URL for Twitter preview
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -36,7 +57,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          
           <Navbar />
           {children}
         </ThemeProvider>
