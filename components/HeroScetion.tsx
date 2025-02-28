@@ -42,6 +42,7 @@ const HeroScetion = () => {
 
   return (
     <>
+    <div className="lg:h-[500px]">
       <div className="flex justify-between lg:mx-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -76,7 +77,7 @@ const HeroScetion = () => {
       </div>
  
         {/* Personal Info Section */}
-      <div className="flex flex-col-reverse  md:flex-row w-full p-1 mt-8 lg:h-[430px] ">
+      <div className="flex flex-col-reverse  md:flex-row w-full p-1 mt-8  ">
         {/* Left Content - Animated from Left */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -151,6 +152,7 @@ const HeroScetion = () => {
           </div>
         </motion.div>
       </div> 
+      </div>
     </>
   );
 };
