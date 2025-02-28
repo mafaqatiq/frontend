@@ -1,7 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { NextPage } from "next";
 
 const posts = [
   {
@@ -34,15 +33,16 @@ const posts = [
   },
 ];
 
+// ✅ Explicitly typing `params`
 interface ProjectPageProps {
   params: { id: string };
 }
 
-const Page: NextPage<ProjectPageProps> = ({ params }) => {
+const Page = ({ params }: ProjectPageProps) => {
   const post = posts.find((p) => p.id === params.id);
 
   if (!post) {
-    return notFound(); // Show 404 page if the post is not found
+    return notFound();
   }
 
   return (
