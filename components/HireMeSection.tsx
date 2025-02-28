@@ -1,16 +1,25 @@
 import { motion } from "framer-motion";
-import React from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { Button } from "./ui/button";
+import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
 
 const HireMeSection = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  if (inView && !hasAnimated) {
+    setHasAnimated(true);
+  }
+
   return (
     <div className="flex-col pt-2 lg:pt-2 sm:pt-4">
       <div className="flex justify-between sm:mx-6 lg:mx-6 lg:py-4">
         <motion.div
+          ref={ref}
           initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center px-4 sm:px-0 lg:px-0 py-0"
         >
           <span
@@ -27,8 +36,9 @@ const HireMeSection = () => {
       <div className="flex flex-col md:flex-row w-full gap-4 p-1 mt-4 mb-4">
         {/* Left Content */}
         <motion.div
+        ref={ref}
           initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={hasAnimated ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-1 items-center justify-center ml-2"
         >
@@ -60,8 +70,9 @@ const HireMeSection = () => {
 
         {/* Right Side - Contact Form */}
         <motion.div
+        ref={ref}
           initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={hasAnimated ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 flex justify-center items-center mx-2 sm:mr-6 lg:mr-6  text-sm lg:text-base "
         >

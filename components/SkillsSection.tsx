@@ -1,14 +1,22 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion } from "framer-motion"; 
+import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
 import SkillsCards from "./SkillsCards"; 
 
 const SkillsSection = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  if (inView && !hasAnimated) {
+    setHasAnimated(true);
+  }
   return (
-    <div className="flex-col  pt-2 lg:pt-2 sm:pt-4">
+    <div className="flex-col  pt-2 lg:pt-6 sm:pt-4">
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex items-center px-4 lg:ml-6 sm:ml-6 ml-0 sm:px-0 lg:px-0 py-1"
       >
         <span
