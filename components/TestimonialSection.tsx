@@ -162,8 +162,9 @@ const TestimonialSection = () => {
                         />
                       </div>
                       <p className="dark:text-gray-100 text-black/80 italic text-sm sm:text-md lg:text-base flex-grow">
-                        "{testimonial.text}"
+                        &ldquo;{testimonial.text}&rdquo;
                       </p>
+
                       <div className="flex items-center lg:text-md sm:text-sm text-sm  justify-between text-center lg:mt-4 sm:mt-4 mt-2">
                         <div className="flex items-center">
                           <h4 className="font-bold dark:text-white text-black/80 ">
