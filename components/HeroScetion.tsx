@@ -76,7 +76,7 @@ const HeroScetion = () => {
       </div>
 
       {/* Personal Info Section */}
-      <div className="flex flex-col-reverse  md:flex-row w-full p-1 mt-8">
+      <div className="flex flex-col-reverse  md:flex-row w-full p-1 mt-8  ">
         {/* Left Content - Animated from Left */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -137,13 +137,16 @@ const HeroScetion = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex-1 flex justify-center items-center"
+          className="flex-1 flex justify-center items-center "
         >
-          <div className="lg:my-6 sm:max-w-44 lg:max-w-xs max-w-24 rounded-full bg-[#27272a] flex justify-center items-center overflow-hidden">
-            <img
+          <div className="lg:my-6 sm:max-w-52 lg:max-w-xs max-w-24 rounded-full bg-[#27272a] flex justify-center items-center overflow-hidden">
+            <Image
               src="/profile.png"
               alt="Portfolio"
+              width={300}  
+              height={300}  
               className="w-full h-full object-cover rounded-full"
+              priority  
             />
           </div>
         </motion.div>
