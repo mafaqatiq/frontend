@@ -90,7 +90,7 @@ const HeroScetion = () => {
               className="text-center lg:text-left sm:text-left"
             >
               <h1 className="my-2 text-2xl sm:text-5xl lg:text-8xl font-bold">
-                I&apos;m Muhammad
+                I&apos;m Afaq
               </h1>
               <p className="lg:text-xl text-sm sm:text-md text-[#5a5959] dark:text-[#b5b5b5] max-w-2xl mx-auto">
                 <span className="hidden sm:inline">
