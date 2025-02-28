@@ -1,0 +1,8 @@
+/* styles/fonts.css */
+@font-face {
+    font-family: "Mona Sans";
+    src: url("/fonts/Mona-Sans.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Ensures text is visible while the font loads */
+  }
