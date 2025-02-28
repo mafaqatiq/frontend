@@ -69,7 +69,7 @@ const SkillsCards = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-3 sm:gap-1 gap-1 sm:px-6 lg:px-6 px-1 sm:py-4 py-2 lg:py-4"
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-3 sm:gap-2 gap-1 sm:px-6 lg:px-6 px-2 sm:py-4 py-2 lg:py-4"
     >
       {services.map((service, index) => (
         <div

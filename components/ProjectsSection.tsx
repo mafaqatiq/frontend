@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React, { useState } from "react";
 import ProjectCards from "./ProjectCards";
+import { MoveRight } from "lucide-react";
 
 const ProjectsSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -31,19 +32,19 @@ const ProjectsSection = () => {
             </span>
           </motion.div>
 
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            {/* <button
+            <button
               onClick={() => (window.location.href = "/projects")}
               className="flex text-xs lg:text-sm sm:text-sm items-center gap-2 bg-[#373737] text-white px-3 mx-3 sm:m-0 lg:m-0 py-2 rounded-lg transition-all duration-300 hover:bg-[#484747]"
             >
               View All
               <MoveRight className="w-3.5 h-4" />
             </button> 
-          </motion.div> */}
+          </motion.div>
         </div>
 
         <ProjectCards />

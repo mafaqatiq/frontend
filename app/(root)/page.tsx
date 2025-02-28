@@ -30,6 +30,7 @@ export default function Home() {
       <section className="dark:bg-[#2c2c2c]  bg-white rounded-lg   pb-0  mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2  ">
         <FooterSection />
       </section>
+
       
     </div>
   );
