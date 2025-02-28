@@ -74,9 +74,9 @@ const HeroScetion = () => {
           </span>
         </motion.div>
       </div>
-
-      {/* Personal Info Section */}
-      <div className="flex flex-col-reverse  md:flex-row w-full p-1 mt-8  ">
+ 
+        {/* Personal Info Section */}
+      <div className="flex flex-col-reverse  md:flex-row w-full p-1 mt-8 lg:h-[430px] ">
         {/* Left Content - Animated from Left */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -150,7 +150,7 @@ const HeroScetion = () => {
             />
           </div>
         </motion.div>
-      </div>
+      </div> 
     </>
   );
 };
