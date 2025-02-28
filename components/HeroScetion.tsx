@@ -139,14 +139,11 @@ const HeroScetion = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 flex justify-center items-center"
         >
-          <div className="lg:my-6 sm:max-w-52 lg:max-w-xs max-w-24 rounded-full bg-[#27272a] flex justify-center items-center overflow-hidden">
-            <Image
+          <div className="lg:my-6 sm:max-w-44 lg:max-w-xs max-w-24 rounded-full bg-[#27272a] flex justify-center items-center overflow-hidden">
+            <img
               src="/profile.png"
               alt="Portfolio"
-              width={300}  
-              height={300}  
               className="w-full h-full object-cover rounded-full"
-              priority  
             />
           </div>
         </motion.div>
