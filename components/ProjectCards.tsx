@@ -37,7 +37,7 @@ return (
     transition={{ duration: 0.8, ease: "easeOut" }}
     className="grid grid-cols-1 gap-1 sm:px-6 lg:px-6 px-3 sm:py-4 py-2 lg:py-4 "
   >
-    {services.map((service, index) => (
+    {services.map((service) => (
       <Link key={service.id} href={`/projects/${service.id}`} passHref>
         <div
           className={`relative bg-white dark:hover:bg-white/10  dark:bg-[#373737] dark:text-white rounded-lg p-4 flex flex-col sm:flex-row items-start sm:items-center transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-r group ${service.glow} border cursor-pointer`}

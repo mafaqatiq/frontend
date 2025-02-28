@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
-import SkillsCards from "./SkillsCards";
-import SocialMediaIcons from "./SocialMediaIcons";
-import { Button } from "./ui/button";
-import { ChevronRight, CirclePlus, Copy, MoveRight } from "lucide-react";
+import React from "react";  
 import ProjectCards from "./ProjectCards";
 
 const ProjectsSection = () => {

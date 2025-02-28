@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import SkillsCards from "./SkillsCards";
-import SocialMediaIcons from "./SocialMediaIcons";
+import SkillsCards from "./SkillsCards"; 
 
 const SkillsSection = () => {
   return (
