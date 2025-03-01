@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Search, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import HireMeSection from "@/components/HireMeSection";
+import FooterSection from "@/components/FooterSection";
 
 const techTags = [
   "React",
@@ -122,6 +124,12 @@ const Projects = () => {
         {/* Project Cards with Search Query and Tech Filter */}
         <ProjectCards searchQuery={searchQuery} selectedTech={selectedTech} />
       </motion.div>
+      <section className="hire-me scroll-mt-24 dark:bg-[#2c2c2c] bg-white rounded-lg mt-2 pb-0 lg:pb-8 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
+        <HireMeSection />
+      </section>
+      <section className="dark:bg-[#2c2c2c] bg-white rounded-lg pb-0 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2">
+        <FooterSection />
+      </section>
     </div>
   );
 };
