@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import React, { useState } from "react";
-import ProjectCards from "./ProjectCards";
+import React, { useState } from "react"; 
 import { MoveRight } from "lucide-react";
+import ProjectsGrid from "./ProjectCards";
 
 const ProjectsSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -47,7 +47,7 @@ const ProjectsSection = () => {
           </motion.div>
         </div>
 
-        <ProjectCards />
+        <ProjectsGrid limit={3} />
       </div>
     </>
   );
