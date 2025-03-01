@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import { sampleProjects } from "@/components/ProjectCards"; 
+import { sampleProjects } from "@/components/ProjectCardsProjectPage"; 
 import { FaArrowLeft, FaArrowRight, FaGithub } from "react-icons/fa";
 
  

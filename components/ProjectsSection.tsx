@@ -1,9 +1,8 @@
-"use client"
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React, { useState } from "react"; 
 import { MoveRight } from "lucide-react";
-import ProjectsGrid from "./ProjectCards";
+import { ProjectCards } from "./ProjectCards";
 
 const ProjectsSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -48,7 +47,7 @@ const ProjectsSection = () => {
           </motion.div>
         </div>
 
-        <ProjectsGrid limit={3} />
+        <ProjectCards />
       </div>
     </>
   );

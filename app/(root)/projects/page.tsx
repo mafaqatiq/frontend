@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ProjectCards from "@/components/ProjectCards";
+import ProjectCards from "@/components/ProjectCardsProjectPage";
 import { useRouter } from "next/navigation";
 import { Search, X } from "lucide-react";
 import { motion } from "framer-motion";
@@ -106,26 +106,32 @@ const handleClear = () => {
 
         {/* Technology Filter Tags */}
         <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex lg:gap-3 sm:gap-3 gap-2 py-2 lg:mx-6 sm:mx-6 mx-2 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800"
-        >
-          {techTags.map((tech) => (
-            <label key={tech} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={selectedTech.includes(tech)}
-                onChange={() => toggleTech(tech)}
-                className="lg:w-4 lg:h-4 sm:h-4 sm:w-4 w-3 h-3"
-              />
-              <span className="flex text-xs lg:text-sm sm:text-xs items-center gap-2 bg-[#484747] text-white lg:px-3 px-2 mr-1 sm:m-0 lg:m-0 py-1.5 my-1 rounded-lg transition-all duration-300 hover:bg-[#585858]">
-                {tech}
-              </span>
-            </label>
-          ))}
-        </motion.div>
+  ref={ref}
+  initial={{ opacity: 0, y: 50 }}
+  animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="flex lg:gap-3 sm:gap-3 gap-2 py-2 lg:mx-6 sm:mx-6 mx-2 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800"
+>
+  {techTags.map((tech) => (
+    <label key={tech} className="flex items-center space-x-2">
+      <input
+        hidden
+        type="checkbox"
+        checked={selectedTech.includes(tech)}
+        onChange={() => toggleTech(tech)}
+        className="lg:w-4 lg:h-4 sm:h-4 sm:w-4 w-3 h-3"
+      />
+      <span
+        className={`flex text-xs lg:text-sm sm:text-xs items-center gap-2 bg-[#484747] text-white lg:px-3 px-2 mr-1 sm:m-0 lg:m-0 py-1.5 my-1 rounded-lg transition-all duration-300 hover:bg-[#585858] ${
+          selectedTech.includes(tech) ? "border-2 border-black" : "border-2 border-transparent"
+        }`}
+      >
+        {tech}
+      </span>
+    </label>
+  ))}
+</motion.div>
+
 
         {/* Project Cards with Search Query and Tech Filter */}
         <ProjectCards searchQuery={searchQuery} selectedTech={selectedTech} />
