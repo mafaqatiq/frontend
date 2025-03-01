@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import ProjectCards from "@/components/ProjectCards";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Search, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

@@ -25,9 +25,9 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "FastAPI", "Next.js"],
     githubUrl: "https://github.com/username/ecommerce-platform",
     imageUrls: [
-      "https://blog.blesshost.com/wp-content/uploads/2017/07/ecommerce-1.png",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvkUFmp5jSF-DhrD5102bzHU7RbidetfqYfA&s",
-    ],
+      "/preview.png",
+      "/ecom.jpeg",
+  ],
   },
   {
     id: "2",
@@ -36,7 +36,9 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "TensorFlow", "Next.js"],
     githubUrl: "https://github.com/username/ai-image-generator",
     imageUrls: [
-      "https://itbrief.com.au/uploads/story/2023/11/27/img-d320oqYWscvU8q8HLX0brOyX.webp",
+      "/profile.png",
+      "/preview.png",
+      "/ecom.jpg",
     ],
   },
   {
@@ -46,7 +48,8 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["TypeScript", "React", "Node.js"],
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: [
-      "https://www.officetimer.com/wp-content/uploads/2020/02/Untitled-design7.png",
+      "/profile.png",
+      "/preview.png",
     ],
   },
   {
@@ -56,7 +59,8 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "Whisper", "Ai"],
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: [
-      "https://www.officetimer.com/wp-content/uploads/2020/02/Untitled-design7.png",
+      "/profile.png",
+      "/preview.png",
     ],
   },
 ];
@@ -214,5 +218,5 @@ const ProjectsGrid: React.FC<{ searchQuery?: string; selectedTech?: string[]; li
   );
 };
 
-
+export { sampleProjects };
 export default ProjectsGrid;
