@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { CirclePlus, Copy, Check } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
+import Image from "next/image"; 
+import SocialMediaIconsHeroSection from "./SocialMediaIconsHeroSection";
 
 const HeroScetion = () => {
   const [copied, setCopied] = useState(false);
@@ -60,20 +61,37 @@ const HeroScetion = () => {
         </motion.div>
 
         {/* Animated "AVAILABLE FOR WORK" */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="flex items-center lg:px-4 lg:py-1 sm:px-4 sm:py-1 mr-3 rounded-full sm:dark:bg-green-900 sm:bg-green-700 lg:dark:bg-green-900 lg:bg-green-700 text-green-300 text-sm font-semibold"
-        >
-          <span
-            className="relative flex justify-center items-center w-1 h-1 dark:bg-green-400 bg-green-300 rounded-full lg:mr-2 mr-3 animate-pulse 
-          before:content-[''] before:absolute before:w-3 before:h-3 lg:before:w-4 lg:before:h-4 before:rounded-full before:bg-green-400 before:opacity-50 before:animate-wave"
-          ></span>
-          <span className="hidden lg:block sm:block ml-2 text-gray-100 dark:text-gray-300">
-            AVAILABLE FOR WORK
-          </span>
-        </motion.div>
+        <a 
+  onClick={() => {
+    const section = document.querySelector(".hire-me");
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }}
+>
+  <motion.div
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+    className="flex items-center lg:px-4 lg:py-1 sm:px-4 sm:py-1 mr-3 rounded-full 
+      sm:dark:bg-green-900 sm:bg-green-700 lg:dark:bg-green-900 lg:bg-green-700 
+      text-green-300 text-sm font-semibold cursor-pointer"   
+  >
+    <span
+      className="relative flex justify-center items-center w-1 h-1 dark:bg-green-400 bg-green-300 rounded-full 
+      lg:mr-2 mr-3 animate-pulse 
+      before:content-[''] before:absolute before:w-3 before:h-3 lg:before:w-4 lg:before:h-4 
+      before:rounded-full before:bg-green-400 before:opacity-50 before:animate-wave"
+    ></span>
+    <span className="hidden lg:block sm:block ml-2 text-gray-100 dark:text-gray-300">
+      AVAILABLE FOR WORK
+    </span>
+  </motion.div>
+</a>
+
       </div>
  
         {/* Personal Info Section */}
@@ -103,6 +121,7 @@ const HeroScetion = () => {
                 </span>
               </p>
             </div>
+            <SocialMediaIconsHeroSection/>
             <div className="flex justify-center lg:justify-start sm:justify-start items-center">
               <div className="flex mt-4   lg:justify-start lg:mx-0 sm:justify-start sm:mx-0">
                 <Button
