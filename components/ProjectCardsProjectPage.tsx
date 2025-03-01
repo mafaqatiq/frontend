@@ -1,8 +1,7 @@
 "use client"
 import { MoveUpRight, Play } from "lucide-react";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
+import { FaGithub } from "react-icons/fa"; 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Url } from "next/dist/shared/lib/router/router";
@@ -72,8 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   imageUrls = [],
   githubUrl,
-}) => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+}) => { 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -88,11 +86,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+    <div
       className="w-full rounded-xl overflow-hidden lg:pt-2 sm:pt-4 pt-2 lg:pb-5 sm:pb-5 pb-4 px-2 bg-[#373737] hover:bg-[#353434]"
     >
       <div
@@ -181,7 +175,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

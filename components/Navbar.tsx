@@ -1,18 +1,22 @@
 "use client";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
-import { CirclePlus, Dock, Home, SquareDashedBottomCode } from "lucide-react";
+import { CirclePlus, CircleUserRound, Dock, Home } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 
 export default function Navbar() {
-  const [active, setActive] = useState("home"); // Default active button
+  const router = useRouter();
+  const pathname = usePathname(); // Get current route to highlight active button
 
-  const handleScroll = (sectionId: string, name: string) => {
-    const section = document.querySelector(sectionId);
+  const handleRedirect = (path: string) => {
+    router.push(path);
+  };
+
+  const handleScroll = () => {
+    const section = document.querySelector(".hire-me");
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setActive(name); // Update active state
   };
 
   return (
@@ -25,32 +29,32 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className={`rounded-full ${active === "home" ? "bg-[#373737] text-white" : ""}`}
-            onClick={() => handleScroll(".home", "home")}
+            className={`rounded-full ${pathname === "/" ? "bg-[#373737] text-white " : ""}`}
+            onClick={() => handleRedirect("/")}
           >
             <Home className="h-8 w-8" />
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className={`rounded-full ${active === "skills" ? "bg-[#373737] text-white" : ""}`}
-            onClick={() => handleScroll(".skills", "skills")}
+            className={`rounded-full ${pathname === "/profile" ? "bg-[#373737] text-white" : ""}`}
+            onClick={() => handleRedirect("/profile")}
           >
-            <Dock className="h-8 w-8" />
+            <CircleUserRound className="h-8 w-8" />
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className={`rounded-full ${active === "projects" ? "bg-[#373737] text-white" : ""}`}
-            onClick={() => handleScroll(".projects", "projects")}
+            className={`rounded-full ${pathname === "/projects" ? "bg-[#373737] text-white" : ""}`}
+            onClick={() => handleRedirect("/projects")}
           >
-            <SquareDashedBottomCode className="h-8 w-8" />
+            <Dock className="h-8 w-8" />
           </Button>
         </div>
         <div className="flex items-center gap-1 lg:gap-3">
           <ModeToggle />
-          <Button className="w-24 ml-1" onClick={() => handleScroll(".hire-me", "hire-me")}>
-            <CirclePlus /> Hire Me
+          <Button className="w-24 ml-1" onClick={handleScroll}>
+            <CirclePlus className="h-5 w-5" /> Hire Me
           </Button>
         </div>
       </div>
