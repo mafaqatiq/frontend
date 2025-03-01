@@ -20,7 +20,7 @@ const techTags = [
   "AI",
 ];
 
-const Projects = () => { 
+const Projects = () => {
   const router = useRouter();
   const [inputValue, setInputValue] = useState(""); // Stores user input but doesn't trigger search
   const [searchQuery, setSearchQuery] = useState("");

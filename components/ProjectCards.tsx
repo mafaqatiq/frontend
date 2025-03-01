@@ -25,7 +25,7 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "FastAPI", "Next.js"],
     githubUrl: "https://github.com/username/ecommerce-platform",
     imageUrls: [
-      "/preview.png",
+      "/preview.PNG",
       "/ecom.jpeg",
   ],
   },
@@ -37,8 +37,8 @@ const sampleProjects: ProjectCardProps[] = [
     githubUrl: "https://github.com/username/ai-image-generator",
     imageUrls: [
       "/profile.png",
-      "/preview.png",
-      "/ecom.jpg",
+      "/preview.PNG",
+      "/ecom.jpeg",
     ],
   },
   {
@@ -49,7 +49,7 @@ const sampleProjects: ProjectCardProps[] = [
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: [
       "/profile.png",
-      "/preview.png",
+      "/preview.PNG",
     ],
   },
   {
