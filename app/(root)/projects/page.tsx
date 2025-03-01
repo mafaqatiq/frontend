@@ -26,17 +26,19 @@ const Projects = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTech, setSelectedTech] = useState<string[]>([]);
 
-  const handleSearch = () => {
-    setSearchQuery(inputValue);
-    router.push(`?search=${inputValue}`);
-  };
+ const handleSearch = () => {
+  setSearchQuery(inputValue);
+  router.replace(`?search=${inputValue}`); // No history stacking
+};
 
-  const handleClear = () => {
-    setSearchQuery("");
-    setInputValue("");
-    setSelectedTech([]);
-    router.push("?");
-  };
+const handleClear = () => {
+  setSearchQuery("");
+  setInputValue("");
+  setSelectedTech([]);
+  router.replace("?"); // Ensures no history stacking
+};
+
+  
 
   const toggleTech = (tech: string) => {
     setSelectedTech((prev) =>
