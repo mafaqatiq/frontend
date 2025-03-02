@@ -25,7 +25,7 @@ export default function Navbar() {
       dark:bg-[#242124]/50 dark:border-none border bg-white/70 z-50"
     >
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 lg:gap-3">
+        <div className="flex items-center gap-1 lg:gap-3">
           <Button
             variant="ghost"
             size="icon"

@@ -23,7 +23,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
         data-tooltip-id="fiverr-tooltip"
-        className="w-11 h-11 flex items-center justify-center text-white bg-green-600 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-green-600 hover:bg-green-500"
+        className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-green-600 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-green-600 hover:bg-green-500"
       >
         <FiverrIcon className="text-2xl" />
       </a>
@@ -35,7 +35,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
         data-tooltip-id="upwork-tooltip"
-        className="w-11 h-11 flex items-center justify-center text-white bg-[#128f00] dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-[#128f00] hover:bg-[#128f00]/80"
+        className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-[#128f00] dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-[#128f00] hover:bg-[#128f00]/80"
       >
         <UpworkIcon className="text-2xl" />
       </a>
@@ -47,7 +47,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
         data-tooltip-id="linkedin-tooltip"
-        className="w-11 h-11 flex items-center justify-center text-white bg-blue-600 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-blue-600 hover:bg-blue-500"
+        className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-blue-600 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-blue-600 hover:bg-blue-500"
       >
         <FaLinkedin className="text-2xl" />
       </a>
@@ -59,7 +59,7 @@ export default function SocialButtons() {
         target="_blank"
         rel="noopener noreferrer"
         data-tooltip-id="github-tooltip"
-        className="w-11 h-11 flex items-center justify-center text-white bg-gray-700 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-gray-700 hover:bg-gray-600"
+        className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-gray-700 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-gray-700 hover:bg-gray-600"
       >
         <FaGithub className="text-2xl" />
       </a>

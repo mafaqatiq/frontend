@@ -78,7 +78,7 @@ const HeroScetion = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               className="flex items-center lg:px-4 lg:py-1 sm:px-4 sm:py-1 mr-3 rounded-full 
       sm:dark:bg-green-900 sm:bg-green-700 lg:dark:bg-green-900 lg:bg-green-700 
-      text-green-300 text-sm font-semibold cursor-pointer"
+      text-green-300 text-sm font-semibold cursor-pointer mt-2"
             >
               <span
                 className="relative flex justify-center items-center w-1 h-1 dark:bg-green-400 bg-green-300 rounded-full 
