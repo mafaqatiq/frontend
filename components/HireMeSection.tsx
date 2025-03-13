@@ -74,23 +74,23 @@ const HireMeSection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={hasAnimated ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex-1 flex justify-center items-center mx-2 sm:mr-6 lg:mr-6  text-sm lg:text-base "
+          className="flex-1 flex justify-center  items-center mx-2 sm:mr-6 lg:mr-6  text-sm lg:text-base "
         >
-          <div className="bg-[#373737] lg:p-4 sm:p-4 px-3 py-4 rounded-lg shadow-md w-full max-w-md">
+          <div className="bg-[#373737] hover:shadow-lg lg:p-4 sm:p-4 px-3 py-4 rounded-lg shadow-md w-full max-w-md">
             <form className="flex flex-col gap-2">
               <div className="flex flex-col sm:flex-row gap-2">
                 <div className="flex flex-col w-full">
                   <input
                     type="text"
                     placeholder="Name"
-                    className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:outline-none"
+                    className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:bg-[#222222]   focus:outline-none "
                   />
                 </div>
                 <div className="flex flex-col w-full">
                   <input
                     type="email"
                     placeholder="Email"
-                    className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:outline-none"
+                    className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:bg-[#222222]   focus:outline-none "
                   />
                 </div>
               </div>
@@ -99,7 +99,7 @@ const HireMeSection = () => {
                 <textarea
                   placeholder="Message"
                   rows={5}
-                  className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg   focus:outline-none  "
+                  className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:bg-[#222222]   focus:outline-none  "
                 ></textarea>
               </div>
               <Button className="w-full bg-[#454346] hover:bg-[#555355] text-white text-xs lg:text-sm sm:text-sm font-bold py-2 px-4 rounded-lg transition">

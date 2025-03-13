@@ -74,9 +74,9 @@ const SkillsCards = () => {
       {services.map((service, index) => (
         <div
           key={index}
-          className={`relative bg-[#F8F9FA] dark:bg-[#373737] dark:text-white rounded-lg lg:p-5 sm:p-6 p-3 flex flex-row sm:flex-col lg:flex-col items-center sm:items-start lg:items-start transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-r group ${service.glow}`}
+          className={`relative bg-[#F8F9FA] border hover:border-black  dark:bg-[#373737] dark:text-white rounded-lg lg:p-5 sm:p-6 p-3 flex flex-row sm:flex-col lg:flex-col items-center sm:items-start lg:items-start transition-all duration-300 hover:shadow-xl  hover:bg-gradient-to-r group ${service.glow}`}
         >
-          <div className="lg:w-12 lg:h-12 sm:w-12 sm:h-12 w-12 h-11 flex items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/80 group-hover:opacity-80 transition-all">
+          <div className="lg:w-12 lg:h-12 sm:w-12 sm:h-12 w-12 h-11 flex items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/80 group-hover:opacity-90 transition-all">
             {service.icon}
           </div>
 
