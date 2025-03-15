@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCards from "@/components/ProjectCardsProjectPage";
 import { useRouter } from "next/navigation";
-import { Search, X } from "lucide-react";
+// import { Search, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import HireMeSection from "@/components/HireMeSection";
@@ -28,23 +28,23 @@ const Projects = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTech, setSelectedTech] = useState<string[]>([]);
 
-  const handleSearch = () => {
-    setSearchQuery(inputValue);
-    router.replace(`?search=${inputValue}`); // No history stacking
-  };
+  // const handleSearch = () => {
+  //   setSearchQuery(inputValue);
+  //   router.replace(`?search=${inputValue}`); // No history stacking
+  // };
 
-  const handleClear = () => {
-    setSearchQuery("");
-    setInputValue("");
-    setSelectedTech([]);
-    router.replace("?"); // Ensures no history stacking
-  };
+  // const handleClear = () => {
+  //   setSearchQuery("");
+  //   setInputValue("");
+  //   setSelectedTech([]);
+  //   router.replace("?"); // Ensures no history stacking
+  // };
 
-  const toggleTech = (tech: string) => {
-    setSelectedTech((prev) =>
-      prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech]
-    );
-  };
+  // const toggleTech = (tech: string) => {
+  //   setSelectedTech((prev) =>
+  //     prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech]
+  //   );
+  // };
 
   const { ref, inView } = useInView({ triggerOnce: true });
   const [hasAnimated, setHasAnimated] = useState(false);
