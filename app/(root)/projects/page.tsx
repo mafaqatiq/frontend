@@ -8,25 +8,29 @@ import { useInView } from "react-intersection-observer";
 import HireMeSection from "@/components/HireMeSection";
 import FooterSection from "@/components/FooterSection";
 
-const techTags = [
-  "React",
-  "Next.js",
-  "Node.js",
-  "Flutter",
-  "Python",
-  "Django",
-  "Tailwind",
-  "SQL",
-  "Tkinter",
-  "PyQt",
-  "AI",
-];
+// const techTags = [
+//   "React",
+//   "Next.js",
+//   "Node.js",
+//   "Flutter",
+//   "Python",
+//   "Django",
+//   "Tailwind",
+//   "SQL",
+//   "Tkinter",
+//   "PyQt",
+//   "AI",
+// ];
 
 const Projects = () => {
   const router = useRouter();
-  const [inputValue, setInputValue] = useState(""); // Stores user input but doesn't trigger search
+  // const [inputValue, setInputValue] = useState(""); // Stores user input but doesn't trigger search
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTech, setSelectedTech] = useState<string[]>([]);
+
+  // update above 2 lines with this when use filtering
+  // const [searchQuery, setSearchQuery] = useState("");
+  // const [selectedTech, setSelectedTech] = useState<string[]>([]);
 
   // const handleSearch = () => {
   //   setSearchQuery(inputValue);
