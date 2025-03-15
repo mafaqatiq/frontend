@@ -76,7 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="w-full rounded-xl justify-start items-center space-y-2    lg:gap-2 lg:flex  overflow-hidden lg:py-2 sm:pt-4 pt-2 sm:pb-5 pb-4 px-2 bg-[#373737] hover:bg-[#353434]">
       <div
-        className="relative lg:max-w-md w-full lg:h-52  sm:h-40 h-36 rounded-lg flex  items-center justify-center  opacity-80"
+        className="relative lg:max-w-md   w-full lg:h-52  sm:h-40 h-44 rounded-lg flex  items-center justify-center  opacity-80"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -137,7 +137,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        <div className="flex  space-x-4 px-2 mt-4">
+        <div className="flex sm:justify-center justify-center lg:justify-start sm:space-x-2 space-x-2 lg:space-x-2  px-2 mt-4">
           <Link href="/" rel="noopener noreferrer">
             <div className="lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-9 h-9 flex items-center justify-center dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/30 group-hover:opacity-80 transition-all">
               <Play className="sm:text-2xl lg:text-3xl text-white" />
@@ -149,9 +149,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={githubUrl as Url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 lg:px-8 sm:px-6 px-5 py-2 text-white bg-black/50 dark:hover:bg-black/40 border-white/10 shadow-lg rounded-lg transition-all duration-300 ease-in-out"
+              className="flex items-center lg:flex-grow-0 gap-2 lg:px-8  flex-1 justify-center py-2 text-white bg-black/50 dark:hover:bg-black/40 border-white/10 shadow-lg rounded-lg transition-all duration-300 ease-in-out"
             >
-              <FaGithub className="lg:text-2xl sm:text-2xl text-base" />
+              <FaGithub className="lg:text-xl sm:text-xl text-base" />
               <span className="lg:text-sm sm:text-sm text-sm font-medium">
                 GitHub
               </span>
