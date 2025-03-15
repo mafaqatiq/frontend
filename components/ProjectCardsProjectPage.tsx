@@ -20,7 +20,7 @@ const sampleProjects: ProjectCardProps[] = [
   {
     id: "1",
     title: "E-Commerce Web Application",
-    description: "A feature-rich online shopping platform with seamless payment integration and an intuitive user experience.",
+    description: "An advanced AI-based tool that creates custom images using deep learning algorithms",
     technologies: ["Python", "FastAPI", "Next.js"],
     githubUrl: "https://github.com/username/ecommerce-platform",
     imageUrls: ["/Capture.PNG", "/ecom.jpeg"],
@@ -36,7 +36,7 @@ const sampleProjects: ProjectCardProps[] = [
   {
     id: "3",
     title: "Task Management System",
-    description: "A powerful productivity app designed for efficient task organization, tracking, and team collaboration.",
+    description: "An advanced AI-based tool that creates custom images using deep learning algorithms",
     technologies: ["TypeScript", "React", "Node.js"],
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: ["/ok.png", "/preview.PNG"],
@@ -44,7 +44,7 @@ const sampleProjects: ProjectCardProps[] = [
   {
     id: "4",
     title: "AI-Powered Audio Transcription",
-    description: "An intelligent transcription tool that accurately converts speech",
+    description: "An advanced AI-based tool that creates custom images using deep learning algorithms",
     technologies: ["Python", "Whisper", "AI"],
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: ["/Capture.PNG"],

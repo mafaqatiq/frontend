@@ -23,14 +23,10 @@ import FooterSection from "@/components/FooterSection";
 // ];
 
 const Projects = () => {
-  const router = useRouter();
+  // const router = useRouter();
   // const [inputValue, setInputValue] = useState(""); // Stores user input but doesn't trigger search
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTech, setSelectedTech] = useState<string[]>([]);
-
-  // update above 2 lines with this when use filtering
-  // const [searchQuery, setSearchQuery] = useState("");
-  // const [selectedTech, setSelectedTech] = useState<string[]>([]);
+  // const [searchQuery] = useState("");
+  // const [selectedTech] = useState<string[]>([]); 
 
   // const handleSearch = () => {
   //   setSearchQuery(inputValue);
@@ -126,7 +122,8 @@ const Projects = () => {
         </div> */}
 
         {/* Project Cards with Search Query and Tech Filter */}
-        <ProjectCards searchQuery={searchQuery} selectedTech={selectedTech} />
+        {/* <ProjectCards searchQuery={searchQuery} selectedTech={selectedTech} /> */}
+        <ProjectCards  />
       </motion.div>
       <section className="hire-me scroll-mt-24 dark:bg-[#2c2c2c] bg-white rounded-lg mt-2 pb-0 lg:pb-8 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
         <HireMeSection />
