@@ -115,6 +115,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             />
+            
             {imageUrls.length > 1 && isHovered && (
               <>
                 <button
