@@ -16,6 +16,7 @@ interface ProjectCardProps {
   technologies: string[];
   imageUrls?: string[];
   githubUrl?: string;
+  videoUrl?: string;
 }
 
 const sampleProjects: ProjectCardProps[] = [
@@ -26,6 +27,7 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "FastAPI", "Next.js"],
     githubUrl: "https://github.com/username/ecommerce-platform",
     imageUrls: ["/Capture.PNG", "/ecom.jpeg"],
+    videoUrl: "/vid.mp4",
   },
   {
     id: "2",
@@ -34,6 +36,7 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "TensorFlow", "Next.js"],
     githubUrl: "https://github.com/username/ai-image-generator",
     imageUrls: ["/Capture.PNG"],
+    videoUrl: "/videos/ecommerce.mp4",
   },
   {
     id: "3",
@@ -42,6 +45,7 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["TypeScript", "React", "Node.js"],
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: ["/ok.png", "/preview.PNG"],
+    videoUrl: "/videos/ecommerce.mp4",
   },
   {
     id: "4",
@@ -50,8 +54,11 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "Whisper", "AI"],
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: ["/Capture.PNG"],
+    videoUrl: "/videos/ecommerce.mp4",
   },
 ];
+
+
 
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -61,9 +68,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   imageUrls = [],
   githubUrl,
+  videoUrl, // Add this line
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Add this line
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % imageUrls.length);
@@ -76,30 +85,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   const { ref, inView } = useInView({ triggerOnce: true });
-    const [hasAnimated, setHasAnimated] = useState(false);
-  
-    if (inView && !hasAnimated) {
-      setHasAnimated(true);
-    }
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  if (inView && !hasAnimated) {
+    setHasAnimated(true);
+  }
+
   return (
     <motion.div 
-    ref={ref}
+      ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full rounded-xl justify-start items-center space-y-2    lg:gap-2 lg:flex  overflow-hidden lg:py-2 sm:pt-4 pt-2 sm:pb-5 pb-4 px-2 bg-[#373737] hover:bg-[#353434]">
+      className="w-full rounded-xl justify-start items-center space-y-2 lg:gap-2 lg:flex overflow-hidden lg:py-2 sm:pt-4 pt-2 sm:pb-5 pb-4 px-2 bg-[#373737] hover:bg-[#353434]"
+    >
       <div
-        className="relative lg:max-w-md   w-full lg:h-52  sm:h-40 h-44 rounded-lg flex  items-center justify-center  opacity-80"
+        className="relative lg:max-w-md w-full lg:h-52 sm:h-40 h-44 rounded-lg flex items-center justify-center opacity-80"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {imageUrls.length > 0 ? (
           <>
             <motion.img
-              key={currentImageIndex} // Key change triggers re-render & animation
+              key={currentImageIndex}
               src={imageUrls[currentImageIndex]}
               alt={title}
-              className="w-full h-full object-fill rounded-xl hover:opacity-90"
+              className="w-full h-full object-fill rounded-xl  hover:opacity-90"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
@@ -126,8 +137,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
       </div>
 
-      <div className="max-w-xl" >
-        <div className="px-2  ">
+      <div className="max-w-xl">
+        <div className="px-2">
           <h3 className="text-white text-sm sm:text-lg lg:text-xl font-semibold">
             {title}
           </h3>
@@ -150,19 +161,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        <div className="flex sm:justify-center justify-center lg:justify-start sm:space-x-2 space-x-2 lg:space-x-2  px-2 mt-4">
-          <Link href="/" rel="noopener noreferrer">
-            <div className="lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-9 h-9 flex items-center justify-center dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/30 group-hover:opacity-80 transition-all">
-              <Play className=" text-white size-5" />
+        <div className="flex sm:justify-center justify-center lg:justify-start sm:space-x-2 space-x-2 lg:space-x-2 px-2 mt-4">
+          <button onClick={() => setIsModalOpen(true)}> {/* Update this line */}
+            <div className="lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-9 h-9 flex items-center justify-center dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/30  group-hover:opacity-80 transition-all">
+              <Play className="text-white size-5" />
             </div>
-          </Link>
+          </button>
 
           {githubUrl && (
             <Link
               href={githubUrl as Url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center lg:flex-grow-0 gap-2 lg:px-8  flex-1 justify-center py-2 text-white bg-black/50 dark:hover:bg-black/40 border-white/10 shadow-lg rounded-lg transition-all duration-300 ease-in-out"
+              className="flex items-center lg:flex-grow-0 gap-2 lg:px-8 flex-1 justify-center py-2 text-white bg-black/50 dark:hover:bg-black/40 border-white/10 shadow-lg rounded-lg transition-all duration-300 ease-in-out"
             >
               <FaGithub className="lg:text-xl sm:text-xl text-base" />
               <span className="lg:text-sm sm:text-sm text-sm font-medium">
@@ -178,6 +189,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Link>
         </div>
       </div>
+
+      {/* Add the modal component */}
+      <DrawerDialogDemo
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+        videoUrl={videoUrl || ""} // Pass the videoUrl here
+      />
     </motion.div>
   );
 };
@@ -209,7 +227,7 @@ const ProjectsGrid: React.FC<{
     : filteredProjects;
 
   return (
-    <div className="container mx-auto pb-4 lg:px-6 sm:px-6 px-2">
+    <div className="container mx-auto pb-4 lg:px-6 sm:px-6 px-2 ">
       <p className="lg:text-3xl  sm:text-2xl text-xl font-bold lg:pt-2 sm:pt-2 pgt-1 px-2 pb-1">
         My Works
       </p> 

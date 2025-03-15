@@ -1,86 +1,66 @@
 import * as React from "react";
-import { useMediaQuery } from "react-responsive"; // Import from react-responsive
+import { useMediaQuery } from "react-responsive";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
 
-export function DrawerDialogDemo() {
-  const [open, setOpen] = React.useState(false);
-  const isDesktop = useMediaQuery({ minWidth: 768 }); // Use react-responsive
+interface DrawerDialogDemoProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  videoUrl: string;
+}
+
+export function DrawerDialogDemo({ open, onOpenChange, videoUrl }: DrawerDialogDemoProps) {
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   if (isDesktop) {
     return (
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
-          <Button variant="outline">Edit Profile</Button>
-        </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+      <Dialog open={open} onOpenChange={onOpenChange}>
+        <DialogContent className="backdrop-blur-md dark:bg-[#242124]/50 sm:max-w-[680px] lg:max-w-[780px]"> {/* Increase width to 2x (850px) */}
           <DialogHeader>
-            <DialogTitle>Edit profile</DialogTitle>
-            <DialogDescription>
-              Make changes to your profile here. Click save when you're done.
-            </DialogDescription>
+            <DialogTitle>Project Preview</DialogTitle>
           </DialogHeader>
-          <ProfileForm />
+          <div className="w-full  h-[300px]  sm:h-[400px] lg:h-[400px]"> {/* Responsive height */}
+            <video muted autoPlay className="w-full rounded-sm h-full"> {/* Remove controls and add autoPlay */}
+              <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </DialogContent>
       </Dialog>
     );
   }
 
   return (
-    <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
-      </DrawerTrigger>
-      <DrawerContent>
+    <Drawer open={open} onOpenChange={onOpenChange}>
+      <DrawerContent className="backdrop-blur-md dark:bg-[#242124]/50 h-[60vh] sm:h-[70vh] lg:h-[60vh]"> {/* Responsive height */}
         <DrawerHeader className="text-left">
-          <DrawerTitle>Edit profile</DrawerTitle>
-          <DrawerDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DrawerDescription>
+          <DrawerTitle>Project Preview</DrawerTitle>
         </DrawerHeader>
-        <ProfileForm className="px-4" />
+        <div className="w-full h-[40vh] sm:h-[50vh] lg:h-[20vh] px-4"> {/* Responsive height */}
+          <video muted autoPlay className="w-full h-full"> {/* Remove controls and add autoPlay */}
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button variant="outline">Close</Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  );
-}
-
-function ProfileForm({ className }: React.ComponentProps<"form">) {
-  return (
-    <form className={cn("grid items-start gap-4", className)}>
-      <div className="grid gap-2">
-        <Label htmlFor="email">Email</Label>
-        <Input type="email" id="email" defaultValue="shadcn@example.com" />
-      </div>
-      <div className="grid gap-2">
-        <Label htmlFor="username">Username</Label>
-        <Input id="username" defaultValue="@shadcn" />
-      </div>
-      <Button type="submit">Save changes</Button>
-    </form>
   );
 }
