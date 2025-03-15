@@ -209,10 +209,10 @@ const ProjectsGrid: React.FC<{
 
   return (
     <div className="container mx-auto pb-4 lg:px-6 sm:px-6 px-2">
-      <p className="text-3xl font-bold pt-2 pb-1">
+      <p className="lg:text-3xl  sm:text-2xl text-xl font-bold lg:pt-2 sm:pt-2 pgt-1 px-2 pb-1">
         My Works
       </p>
-      <p className=" text-gray-600 dark:text-white text-sm lg:text-base">
+      <p className=" text-gray-600 dark:text-white text-sm lg:text-base px-2">
       Discover my portfolio, where purposeful interfaces meet captivating design. My work strives to enhance experiences and inspire.
 
             </p>
