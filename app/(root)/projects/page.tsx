@@ -73,7 +73,7 @@ const Projects = () => {
             My Projects
           </span>
         </div>
-        <div className="flex items-center justify-center gap-1 lg:pr-2 sm:pr-2 pr-1 p-1 lg:mx-6 sm:mx-6 mx-2 lg:my-2 sm:my-2 my-0 lg:mt-6 sm:mt-6 mt-4 rounded-xl bg-[#373737]">
+        {/* <div className="flex items-center justify-center gap-1 lg:pr-2 sm:pr-2 pr-1 p-1 lg:mx-6 sm:mx-6 mx-2 lg:my-2 sm:my-2 my-0 lg:mt-6 sm:mt-6 mt-4 rounded-xl bg-[#373737]">
           <input
             type="text"
             placeholder="Search projects"
@@ -95,10 +95,10 @@ const Projects = () => {
           >
             <X size={18} className="sm:text-2xl lg:text-3xl text-white" />
           </button>
-        </div>
+        </div> */}
 
         {/* Technology Filter Tags */}
-        <div className="flex lg:gap-3 sm:gap-3 gap-2 py-2 lg:mx-6 sm:mx-6 mx-2 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+        {/* <div className="flex lg:gap-3 sm:gap-3 gap-2 py-2 lg:mx-6 sm:mx-6 mx-2 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
           {techTags.map((tech) => (
             <label key={tech} className="flex items-center space-x-2">
               <input
@@ -119,7 +119,7 @@ const Projects = () => {
               </span>
             </label>
           ))}
-        </div>
+        </div> */}
 
         {/* Project Cards with Search Query and Tech Filter */}
         <ProjectCards searchQuery={searchQuery} selectedTech={selectedTech} />
