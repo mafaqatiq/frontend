@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Url } from "next/dist/shared/lib/router/router";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 
 interface ProjectCardProps {
   id: string;
@@ -73,8 +74,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     );
   };
 
+  const { ref, inView } = useInView({ triggerOnce: true });
+    const [hasAnimated, setHasAnimated] = useState(false);
+  
+    if (inView && !hasAnimated) {
+      setHasAnimated(true);
+    }
   return (
-    <div className="w-full rounded-xl justify-start items-center space-y-2    lg:gap-2 lg:flex  overflow-hidden lg:py-2 sm:pt-4 pt-2 sm:pb-5 pb-4 px-2 bg-[#373737] hover:bg-[#353434]">
+    <motion.div 
+    ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="w-full rounded-xl justify-start items-center space-y-2    lg:gap-2 lg:flex  overflow-hidden lg:py-2 sm:pt-4 pt-2 sm:pb-5 pb-4 px-2 bg-[#373737] hover:bg-[#353434]">
       <div
         className="relative lg:max-w-md   w-full lg:h-52  sm:h-40 h-44 rounded-lg flex  items-center justify-center  opacity-80"
         onMouseEnter={() => setIsHovered(true)}
@@ -140,7 +152,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="flex sm:justify-center justify-center lg:justify-start sm:space-x-2 space-x-2 lg:space-x-2  px-2 mt-4">
           <Link href="/" rel="noopener noreferrer">
             <div className="lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-9 h-9 flex items-center justify-center dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/30 group-hover:opacity-80 transition-all">
-              <Play className="sm:text-2xl lg:text-3xl text-white" />
+              <Play className=" text-white size-5" />
             </div>
           </Link>
 
@@ -160,12 +172,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
           <Link href={`/projects/${id}`} rel="noopener noreferrer">
             <div className="lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-9 h-9 flex items-center justify-center dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/30 group-hover:opacity-80 transition-all">
-              <MoveUpRight className="text-1xl sm:text-2xl lg:text-3xl text-white" />
+              <MoveUpRight className="size-5 text-white" />
             </div>
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -196,8 +208,15 @@ const ProjectsGrid: React.FC<{
     : filteredProjects;
 
   return (
-    <div className="container mx-auto py-4 lg:px-6 sm:px-6 px-2">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 sm:gap-2 gap-3">
+    <div className="container mx-auto pb-4 lg:px-6 sm:px-6 px-2">
+      <p className="text-3xl font-bold pt-2 pb-1">
+        My Works
+      </p>
+      <p className=" text-gray-600 dark:text-white text-sm lg:text-base">
+      Discover my portfolio, where purposeful interfaces meet captivating design. My work strives to enhance experiences and inspire.
+
+            </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 sm:gap-2 gap-3 pt-6">
         {displayedProjects.length > 0 ? (
           displayedProjects.map((project, index) => (
             <ProjectCard key={index} {...project} />

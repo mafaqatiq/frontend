@@ -69,9 +69,10 @@ const Projects = () => {
             className="relative flex justify-center items-center w-0.5 h-0.5 sm:w-1 sm:h-1 lg:w-1 lg:h-1 dark:bg-gray-500 bg-[#5a5959] rounded-full 
           lg:mr-2 mr-2 animate-pulse before:content-[''] before:absolute before:w-2 before:h-2 lg:before:w-4 lg:before:h-4 before:rounded-full before:bg-gray-500 before:opacity-50 before:animate-wave"
           ></span>
-          <span className="lg:ml-1.5 sm:text-base lg:text-2xl text-sm font-semibold text-[#5a5959] dark:text-[#b5b5b5]">
-            My Projects
-          </span>
+          <span className="lg:ml-1.5 sm:text-base  lg:text-lg text-xs font-semibold text-[#5a5959] dark:text-[#b5b5b5]">
+              Projects
+            </span>
+          
         </div>
         {/* <div className="flex items-center justify-center gap-1 lg:pr-2 sm:pr-2 pr-1 p-1 lg:mx-6 sm:mx-6 mx-2 lg:my-2 sm:my-2 my-0 lg:mt-6 sm:mt-6 mt-4 rounded-xl bg-[#373737]">
           <input
@@ -123,6 +124,7 @@ const Projects = () => {
 
         {/* Project Cards with Search Query and Tech Filter */}
         {/* <ProjectCards searchQuery={searchQuery} selectedTech={selectedTech} /> */}
+        
         <ProjectCards  />
       </motion.div>
       <section className="hire-me scroll-mt-24 dark:bg-[#2c2c2c] bg-white rounded-lg mt-2 pb-0 lg:pb-8 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
