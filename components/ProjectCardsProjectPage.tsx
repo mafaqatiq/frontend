@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Url } from "next/dist/shared/lib/router/router";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
+import { DrawerDialogDemo } from "./DrawerDialogDemo";
 
 interface ProjectCardProps {
   id: string;
@@ -211,7 +212,7 @@ const ProjectsGrid: React.FC<{
     <div className="container mx-auto pb-4 lg:px-6 sm:px-6 px-2">
       <p className="lg:text-3xl  sm:text-2xl text-xl font-bold lg:pt-2 sm:pt-2 pgt-1 px-2 pb-1">
         My Works
-      </p>
+      </p> 
       <p className=" text-gray-600 dark:text-white text-sm lg:text-base px-2">
       Discover my portfolio, where purposeful interfaces meet captivating design. My work strives to enhance experiences and inspire.
 
