@@ -45,7 +45,7 @@ export function DrawerDialogDemo({ open, onOpenChange, videoUrl }: DrawerDialogD
 
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
-      <DrawerContent className="backdrop-blur-md dark:bg-[#242124]/50 h-[60vh] sm:h-[70vh] lg:h-[60vh]"> {/* Responsive height */}
+      <DrawerContent className="backdrop-blur-md dark:bg-[#242124]/50 h-[50vh] sm:h-[70vh] lg:h-[60vh]"> {/* Responsive height */}
         <DrawerHeader className="text-left">
           <DrawerTitle>Project Preview</DrawerTitle>
         </DrawerHeader>
