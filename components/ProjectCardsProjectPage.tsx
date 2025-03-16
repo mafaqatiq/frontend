@@ -154,7 +154,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <button
                 key={index}
                 disabled
-                className="flex text-xs lg:text-xs sm:text-xs items-center gap-2   dark:bg-[#484747] text-black border dark:text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 dark:hover:bg-[#585858]"
+                className="flex text-xs lg:text-xs sm:text-xs items-center gap-2  dark:border-none  dark:bg-[#484747] text-black border dark:text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 dark:hover:bg-[#585858]"
               >
                 {tech}
               </button>
@@ -162,10 +162,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        <div className="flex sm:justify-center justify-center lg:justify-start sm:space-x-2 space-x-2 lg:space-x-2 px-2 mt-4">
+        <div className="flex sm:justify-center justify-center lg:justify-start sm:space-x-2  space-x-2 lg:space-x-2 px-2 mt-4">
           <button onClick={() => setIsModalOpen(true)}> {/* Update this line */}
-            <div className="lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-9 h-9 flex items-center justify-center dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/30  group-hover:opacity-80 transition-all">
-              <Play className="text-white size-5" />
+            <div className="lg:w-12 lg:h-9 sm:w-12 sm:h-9 w-12 h-9 flex items-center justify-center hover:bg-[#efeeee] border-black/30 border dark:border-none bg-[#FDFDFD] dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50  group-hover:opacity-80 transition-all">
+              <Play className="dark:text-white text-black size-5" />
             </div>
           </button>
 
@@ -174,7 +174,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={githubUrl as Url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center lg:flex-grow-0 gap-2 lg:px-8 flex-1 justify-center py-2 text-white bg-black/50 dark:hover:bg-black/40 border-white/10 shadow-lg rounded-lg transition-all duration-300 ease-in-out"
+              className="flex items-center h-9 lg:flex-grow-0 gap-2 lg:px-8 flex-1 justify-center  text-white bg-[#4D4DF5] hover:bg-[#4D4DF5]/95  dark:hover:bg-black/40 dark:bg-black/50  border-white/10 shadow-lg rounded-lg transition-all duration-300 ease-in-out"
             >
               <FaGithub className="lg:text-xl sm:text-xl text-base" />
               <span className="lg:text-sm sm:text-sm text-sm font-medium">
@@ -184,8 +184,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
 
           <Link href={`/projects/${id}`} rel="noopener noreferrer">
-            <div className="lg:w-10 lg:h-10 sm:w-10 sm:h-10 w-9 h-9 flex items-center justify-center dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/30 group-hover:opacity-80 transition-all">
-              <MoveUpRight className="size-5 text-white" />
+            <div className="lg:w-12 lg:h-9 sm:w-10 sm:h-9 w-12 h-9 flex items-center justify-center hover:bg-[#efeeee] border-black/30 border dark:border-none dark:hover:bg-black/40 rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-[#FDFDFD] group-hover:opacity-80 transition-all">
+              <MoveUpRight className="dark:text-white text-black size-5" />
             </div>
           </Link>
         </div>
