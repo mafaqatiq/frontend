@@ -124,7 +124,7 @@ const HeroScetion = () => {
               <div className="flex justify-center lg:justify-start sm:justify-start items-center">
                 <div className="flex mt-4   lg:justify-start lg:mx-0 sm:justify-start sm:mx-0">
                   <Button
-                    className="w-28"
+                    className="w-28 dark:bg-white dark:hover:bg-white/90 bg-[#4D4DF5] hover:bg-[#4D4DF5]/90"
                     onClick={() => {
                       const section = document.querySelector(".hire-me");
                       if (section) {
@@ -140,7 +140,7 @@ const HeroScetion = () => {
 
                   <Button
                     variant="secondary"
-                    className="w-30 ml-2 flex items-center justify-center dark:border-none border dark:hover:bg-[#303030] hover:bg-[#ccc8c8]"
+                    className="w-30 ml-2 flex items-center justify-center dark:border-none border dark:hover:bg-[#303030] hover:bg-[#edebeb]"
                     onClick={handleCopyEmail}
                   >
                     {copied ? (

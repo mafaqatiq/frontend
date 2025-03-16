@@ -97,10 +97,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       initial={{ opacity: 0, y: 50 }}
       animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full rounded-xl justify-start items-center space-y-2 lg:gap-2 lg:flex overflow-hidden lg:py-2 sm:pt-4 pt-2 sm:pb-5 pb-4 px-2 bg-[#373737] hover:bg-[#353434]"
+      className="w-full rounded-xl justify-start items-center space-y-2 lg:gap-2 lg:flex overflow-hidden lg:py-2 sm:pt-4 pt-2 sm:pb-5 pb-4 px-2 dark:bg-[#373737] bg-white  dark:border-none border dark:hover:bg-[#353434]"
     >
       <div
-        className="relative lg:max-w-md w-full lg:h-52 sm:h-40 h-44 rounded-lg flex items-center justify-center opacity-80"
+        className="relative lg:max-w-md w-full lg:h-52 sm:h-40 h-44 rounded-lg flex items-center justify-center  "
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -134,13 +134,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
           </>
         ) : (
-          <p className="text-white text-lg">Project image</p>
+          <p className="dark:text-white text-black text-lg">Project image</p>
         )}
       </div>
 
       <div className="max-w-xl">
         <div className="px-2">
-          <h3 className="text-white text-sm sm:text-lg lg:text-xl font-semibold">
+          <h3 className="dark:text-white text-black text-sm sm:text-lg lg:text-xl font-semibold">
             {title}
           </h3>
           <p className="text-gray-250 text-xs sm:text-sm lg:text-base">
@@ -154,7 +154,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <button
                 key={index}
                 disabled
-                className="flex text-xs lg:text-xs sm:text-xs items-center gap-2 bg-[#484747] text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 hover:bg-[#585858]"
+                className="flex text-xs lg:text-xs sm:text-xs items-center gap-2   dark:bg-[#484747] text-black border dark:text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 dark:hover:bg-[#585858]"
               >
                 {tech}
               </button>

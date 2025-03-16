@@ -29,7 +29,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className={`rounded-full ${pathname === "/" ? "bg-[#373737] text-white " : ""}`}
+            className={`hover:bg-[#e3e3e4] dark:hover:bg-[#373737] rounded-full ${pathname === "/" ? "bg-[#4D4DF5] hover:bg-[#4848fa] hover:text-white  dark:bg-[#373737] text-white " : ""}`}
             onClick={() => handleRedirect("/")}
           >
             <Home className="h-8 w-8" />
@@ -37,7 +37,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className={`rounded-full ${pathname === "/profile" ? "bg-[#373737] text-white" : ""}`}
+            className={`hover:bg-[#e3e3e4] dark:hover:bg-[#373737] rounded-full ${pathname === "/profile" ? "bg-[#4D4DF5] hover:bg-[#4848fa] hover:text-white  dark:bg-[#373737] text-white" : ""}`}
             onClick={() => handleRedirect("/profile")}
           >
             <CircleUserRound className="h-8 w-8" />
@@ -45,7 +45,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className={`rounded-full ${pathname === "/projects" ? "bg-[#373737] text-white" : ""}`}
+            className={`hover:bg-[#e3e3e4] dark:hover:bg-[#373737] rounded-full ${pathname === "/projects" ? "bg-[#4D4DF5] hover:bg-[#4848fa] hover:text-white dark:bg-[#373737] text-white" : ""}`}
             onClick={() => handleRedirect("/projects")}
           >
             <Dock className="h-8 w-8" />
@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-1 lg:gap-3">
           <ModeToggle />
-          <Button className="w-24 ml-1" onClick={handleScroll}>
+          <Button className="w-24 ml-1 dark:bg-white dark:hover:bg-white/90 bg-[#4D4DF5] hover:bg-[#4D4DF5]/90  " onClick={handleScroll}>
             <CirclePlus className="h-5 w-5" /> Hire Me
           </Button>
         </div>

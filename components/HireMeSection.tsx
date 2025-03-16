@@ -47,7 +47,7 @@ const HireMeSection = () => {
               <h1 className="my-2 text-2xl sm:text-4xl lg:text-5xl font-bold">
                 Get In Touch
               </h1>
-              <div className="hidden sm:hidden lg:block lg:text-base text-sm   sm:mr-6 text-[#959595] dark:text-[#b5b5b5] max-w-2xl mx-auto">
+              <div className="hidden sm:hidden lg:block lg:text-base text-sm   sm:mr-6 text-[#7c7c7c] dark:text-[#b5b5b5] max-w-2xl mx-auto">
                 <p>Need a developer to turn your vision into reality?</p>
                 <p>Let’s connect and bring your project to life.</p>
               </div>
@@ -76,21 +76,21 @@ const HireMeSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 flex justify-center  items-center mx-2 sm:mr-6 lg:mr-6  text-sm lg:text-base "
         >
-          <div className="bg-[#373737] hover:shadow-lg lg:p-4 sm:p-4 px-3 py-4 rounded-lg shadow-md w-full max-w-md">
+          <div className="dark:bg-[#373737] border hover:shadow-lg lg:p-4 sm:p-4 px-3 py-4 rounded-lg shadow-md w-full max-w-md">
             <form className="flex flex-col gap-2">
               <div className="flex flex-col sm:flex-row gap-2">
                 <div className="flex flex-col w-full">
                   <input
                     type="text"
                     placeholder="Name"
-                    className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:bg-[#222222]   focus:outline-none "
+                    className="w-full px-4 py-2 dark:bg-[#2c2c2c] bg-[#f4f3f3] dark:text-white text-black rounded-lg dark:focus:bg-[#222222] focus:bg-[#f7f5f5]   dark:focus:outline-double "
                   />
                 </div>
                 <div className="flex flex-col w-full">
                   <input
                     type="email"
                     placeholder="Email"
-                    className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:bg-[#222222]   focus:outline-none "
+                    className="w-full px-4 py-2 dark:bg-[#2c2c2c] bg-[#f4f3f3] dark:text-white text-black rounded-lg dark:focus:bg-[#222222]   dark:focus:outline-double  "
                   />
                 </div>
               </div>
@@ -99,10 +99,10 @@ const HireMeSection = () => {
                 <textarea
                   placeholder="Message"
                   rows={5}
-                  className="w-full px-4 py-2 bg-[#2c2c2c] text-white rounded-lg focus:bg-[#222222]   focus:outline-none  "
+                  className="w-full px-4 py-2 dark:bg-[#2c2c2c] bg-[#f4f3f3] dark:text-white text-black rounded-lg dark:focus:bg-[#222222]   dark:focus:outline-double  "
                 ></textarea>
               </div>
-              <Button className="w-full bg-[#454346] hover:bg-[#555355] text-white text-xs lg:text-sm sm:text-sm font-bold py-2 px-4 rounded-lg transition">
+              <Button className="w-full dark:bg-[#454346] bg-[#4D4DF5] hover:bg-[#4D4DF5]/90 dark:hover:bg-[#555355] text-white text-xs lg:text-sm sm:text-sm font-bold py-2 px-4 rounded-lg transition">
                 Send Message
               </Button>
             </form>

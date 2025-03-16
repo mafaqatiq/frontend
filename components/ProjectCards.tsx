@@ -52,7 +52,7 @@ export const ProjectCards = () => {
           >
             {/* Image - Displayed instead of icon */}
             <div 
-            className="w-14 h-14 lg:flex sm:flex hidden items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-black/80 group-hover:opacity-90 transition-all shrink-0">
+            className="w-14 h-14 lg:flex sm:flex hidden items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-white dark:border-none border group-hover:opacity-90 transition-all shrink-0">
               <img src={service.imageUrl} alt={service.title} className="w-full h-full object-cover rounded-lg" />
             </div>
 
@@ -66,8 +66,8 @@ export const ProjectCards = () => {
 
             {/* Text Content */}
             <div className="mt-2 sm:mt-0 sm:ml-4 flex flex-col flex-grow text-start sm:text-left">
-              <h3 className="text-base sm:text-xl font-semibold">{service.title}</h3>
-              <p className="text-sm sm:text-md text-gray-600 dark:text-gray-300">{service.description}</p>
+              <h3 className="text-base sm:text-xl lg:text-xl font-semibold">{service.title}</h3>
+              <p className="text-sm sm:text-base lg:text-base text-gray-600 dark:text-gray-300">{service.description}</p>
             </div>
 
             {/* Right Arrow */}

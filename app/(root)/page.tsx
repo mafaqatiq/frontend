@@ -17,17 +17,17 @@ export default function Home() {
       <section className="skills  scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-6 mx-2 lg:mx-0 sm:mx-0 sm:mt-14 lg:mt-0   border">
         <SkillsSection />
       </section>
-      <section className="projects scroll-mt-24 dark:bg-[#2c2c2c] bg-white rounded-lg mt-2 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
+      <section className="projects scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-2 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
         <ProjectsSection />
       </section>
       
-      <section className="dark:bg-[#2c2c2c]  bg-white rounded-lg mt-2 pb-0 lg:pb-12 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
+      <section className="dark:bg-[#2c2c2c]  bg-[#FDFDFD] rounded-lg mt-2 pb-0 lg:pb-12 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
         <TestimonialSection />
       </section>
-      <section className="hire-me   scroll-mt-24 dark:bg-[#2c2c2c] bg-white rounded-lg mt-2 pb-0 lg:pb-8 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
+      <section className="hire-me   scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-2 pb-0 lg:pb-8 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
         <HireMeSection />
       </section>
-      <section className="dark:bg-[#2c2c2c]  bg-white rounded-lg   pb-0  mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2  ">
+      <section className="dark:bg-[#2c2c2c]  bg-[#FDFDFD] dark:border-none border rounded-lg   pb-0  mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2  ">
         <FooterSection />
       </section>
 

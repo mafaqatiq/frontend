@@ -33,7 +33,7 @@ const ProjectPage = () => {
       <section className="skills scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-6 mx-2 lg:mx-0 sm:mx-0 sm:mt-14 lg:mt-0 border">
         <div className="w-full px-6 py-8 text-white">
           <h1 className="text-3xl font-bold mb-4">{title}</h1>
-          <div className="relative w-full mx-auto">
+          <div className="relative w-full h-96 mx-auto">
             {imageUrls.length > 0 ? (
               <>
                 <Image
@@ -41,7 +41,7 @@ const ProjectPage = () => {
                   alt={title}
                   width={800}
                   height={400}
-                  className="w-full h-96 object-cover rounded-xl opacity-80"
+                  className="w-full h-96 object-fill rounded-xl opacity-80"
                 />
                 {imageUrls.length > 1 && (
                   <>
