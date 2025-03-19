@@ -39,7 +39,7 @@ const ProjectsSection = () => {
           >
             <button 
               onClick={() => (window.location.href = "/projects")}
-              className="flex text-xs lg:text-sm sm:text-sm items-center gap-2 bg-[#373737] text-white px-3 mx-3 sm:m-0 lg:m-0 py-2 rounded-lg transition-all duration-300 hover:bg-[#484747]"
+              className="flex text-xs lg:text-sm sm:text-sm items-center gap-2 dark:bg-[#373737] bg-[#4D4DF5] hover:bg-[#4D4DF5]/90 text-white px-3 mx-3 sm:m-0 lg:m-0 py-2 rounded-lg transition-all duration-300 dark:hover:bg-[#484747]"
             >
               View All
               <MoveRight className="w-3.5 h-4" />

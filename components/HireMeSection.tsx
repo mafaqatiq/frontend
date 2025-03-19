@@ -83,14 +83,14 @@ const HireMeSection = () => {
                   <input
                     type="text"
                     placeholder="Name"
-                    className="w-full px-4 py-2 dark:bg-[#2c2c2c] bg-[#f4f3f3] dark:text-white text-black rounded-lg dark:focus:bg-[#222222] focus:bg-[#f7f5f5]   dark:focus:outline-double "
+                    className="w-full px-4 py-2.5 dark:bg-[#2c2c2c] bg-[#f4f3f3] dark:text-white text-black rounded-lg dark:focus:bg-[#222222] focus:bg-[#f7f5f5]   dark:focus:outline-double "
                   />
                 </div>
                 <div className="flex flex-col w-full">
                   <input
                     type="email"
                     placeholder="Email"
-                    className="w-full px-4 py-2 dark:bg-[#2c2c2c] bg-[#f4f3f3] dark:text-white text-black rounded-lg dark:focus:bg-[#222222]   dark:focus:outline-double  "
+                    className="w-full px-4 py-2.5 dark:bg-[#2c2c2c] bg-[#f4f3f3] dark:text-white text-black rounded-lg dark:focus:bg-[#222222]   dark:focus:outline-double  "
                   />
                 </div>
               </div>

@@ -154,7 +154,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <button
                 key={index}
                 disabled
-                className="flex text-xs lg:text-xs sm:text-xs items-center gap-2  dark:border-none  dark:bg-[#484747] text-black border dark:text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 dark:hover:bg-[#585858]"
+                className="flex text-xs lg:text-xs sm:text-xs items-center gap-2  dark:border-none hover:bg-[#efeeee]  dark:bg-[#484747] text-black border dark:text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 dark:hover:bg-[#585858]"
               >
                 {tech}
               </button>

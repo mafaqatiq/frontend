@@ -133,7 +133,7 @@ const TestimonialSection = () => {
           <div className="flex items-center justify-center lg:space-x-4 sm:space-x-2">
             <button
               onClick={prevSlide}
-              className="dark:bg-white/10 bg-[#5a5959] text-white hover:bg-[#7b7979] lg:p-3 sm:p-2 hidden lg:block sm:block rounded-full shadow-lg dark:hover:bg-white/20 transition-all"
+              className="dark:bg-white/10 bg-[#4D4DF5] hover:bg-[#4D4DF5]/90 text-white dark:hover:bg-[#7b7979] lg:p-3 sm:p-2 hidden lg:block sm:block rounded-full shadow-lg dark:hover:bg-white/20 transition-all"
             >
               <ChevronLeft size={24} />
             </button>
@@ -180,7 +180,7 @@ const TestimonialSection = () => {
             </div>
             <button
               onClick={nextSlide}
-              className="bg-[#5a5959] text-white hover:bg-[#7b7979]  dark:bg-white/10 lg:p-3 sm:p-2 hidden lg:block sm:block  rounded-full shadow-lg dark:hover:bg-white/20 transition-all"
+              className="  text-white  bg-[#4D4DF5] hover:bg-[#4D4DF5]/90 dark:bg-white/10 lg:p-3 sm:p-2 hidden lg:block sm:block  rounded-full shadow-lg dark:hover:bg-white/20 transition-all"
             >
               <ChevronRight size={24} />
             </button>
