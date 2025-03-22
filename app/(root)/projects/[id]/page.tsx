@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import { sampleProjects } from "@/components/ProjectCardsProjectPage"; 
+import { sampleProjects } from "@/components/ProjectCardsProjectPage";
 import { FaArrowLeft, FaArrowRight, FaGithub } from "react-icons/fa";
-
- 
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -16,7 +16,13 @@ const ProjectPage = () => {
     return <div className="text-center text-white">Project not found.</div>;
   }
 
-  const { title, description, technologies, imageUrls = [], githubUrl } = project;
+  const {
+    title,
+    description,
+    technologies,
+    imageUrls = [],
+    githubUrl,
+  } = project;
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % imageUrls.length);
@@ -27,9 +33,20 @@ const ProjectPage = () => {
       (prev) => (prev - 1 + imageUrls.length) % imageUrls.length
     );
   };
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const [hasAnimated, setHasAnimated] = useState(false);
 
+  if (inView && !hasAnimated) {
+    setHasAnimated(true);
+  }
   return (
-    <div className="selection:bg-[#212121] mx-auto w-[90%] max-w-6xl mb-2 lg:mt-24 mt-20 lg:px-4 sm:px-4 lg:pt-4 sm:pt-4 lg:pb-2 sm:pb-2 px-1 py-2 dark:border-none border rounded-lg backdrop-blur-md dark:bg-[#242124]/50 bg-white">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="selection:bg-[#212121] mx-auto w-[90%] max-w-6xl mb-2 lg:mt-24 mt-20 lg:px-4 sm:px-4 lg:pt-4 sm:pt-4 lg:pb-2 sm:pb-2 px-1 py-2 dark:border-none border rounded-lg backdrop-blur-md dark:bg-[#242124]/50 bg-white"
+    >
       <section className="skills scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-6 mx-2 lg:mx-0 sm:mx-0 sm:mt-14 lg:mt-0 border">
         <div className="w-full px-6 py-8 text-white">
           <h1 className="text-3xl font-bold mb-4">{title}</h1>
@@ -92,7 +109,7 @@ const ProjectPage = () => {
           )}
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

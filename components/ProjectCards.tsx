@@ -7,23 +7,34 @@ import Link from "next/link";
 const services = [
   {
     id: "1",
-    title: "E-Commerce Platform",
-    description: "Full-stack shopping application with payment integration",
-    imageUrl: "/images/ecommerce.png", // Replace with actual image path
+    title: "Musify",
+    description:
+      "A web-based music player for streaming, searching, exploring songs, and creating playlists.",
+    imageUrl: "/musify_icon.PNG", // Replace with actual image path
     glow: "shadow-blue-500/50",
   },
   {
     id: "2",
-    title: "AI Image Generator",
-    description: "Generate custom images using machine learning algorithms",
-    imageUrl: "/images/ai-generator.png", // Replace with actual image path
+    title: "Payment Tracker",
+    description:
+      "A payment tracking app to monitor requests, statuses, history, and transaction details.",
+    imageUrl: "/payment_icon.png", // Replace with actual image path
     glow: "shadow-purple-500/50",
   },
   {
     id: "3",
-    title: "Task Management App",
-    description: "Productivity tool for organizing personal and team tasks",
-    imageUrl: "/images/task-manager.png", // Replace with actual image path
+    title: "Fudo",
+    description:
+      "A fast-food ordering platform for seamless browsing, ordering, management, and role-based user access.",
+    imageUrl: "/food_icon.png", // Replace with actual image path
+    glow: "shadow-green-500/50",
+  },
+  {
+    id: "4",
+    title: "Smart Invoice Extraction",
+    description:
+      "An AI-powered system for invoice annotation, data extraction, validation, and storage.",
+    imageUrl: "/invoice_icon.png",
     glow: "shadow-green-500/50",
   },
 ];
@@ -35,7 +46,7 @@ export const ProjectCards = () => {
   if (inView && !hasAnimated) {
     setHasAnimated(true);
   }
-  
+
   return (
     <motion.div
       ref={ref}
@@ -47,27 +58,37 @@ export const ProjectCards = () => {
       {services.map((service) => (
         <Link key={service.id} href={`/projects/${service.id}`} passHref>
           <div
-           
             className={`relative bg-white dark:hover:bg-white/10 dark:bg-[#373737] dark:text-white rounded-lg p-4 flex flex-col sm:flex-row items-start sm:items-center transition-all duration-300 hover:shadow-xl hover:bg-gradient-to-r group ${service.glow} border cursor-pointer`}
           >
             {/* Image - Displayed instead of icon */}
-            <div 
-            className="w-14 h-14 lg:flex sm:flex hidden items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r dark:bg-black/50 bg-white dark:border-none border group-hover:opacity-90 transition-all shrink-0">
-              <img src={service.imageUrl} alt={service.title} className="w-full h-full object-cover rounded-lg" />
+            <div className="w-14 h-14 lg:flex sm:flex hidden items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r dark:bg-white/80 bg-black/5 dark:border-none border group-hover:opacity-90 transition-all shrink-0">
+              <img
+                src={service.imageUrl}
+                alt={service.title}
+                className="w-8 h-8 object-cover rounded-lg"
+              />
             </div>
 
             {/* Image on Mobile - Separate layout */}
             <div className="flex justify-between lg:hidden sm:hidden w-full">
-              <div className="w-14 h-14 flex items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r bg-black/50 group-hover:opacity-80 transition-all shrink-0">
-                <img src={service.imageUrl} alt={service.title} className="w-full h-full object-cover rounded-lg" />
+              <div className="w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden bg-gradient-to-r dark:bg-white/80 bg-black/5 group-hover:opacity-80 transition-all shrink-0">
+                <img
+                  src={service.imageUrl}
+                  alt={service.title}
+                  className="w-7 h-7 object-cover rounded-lg"
+                />
               </div>
               <ChevronRight className="lg:hidden sm:hidden mt-2 sm:mt-0 sm:ml-auto text-gray-500 dark:text-gray-300 text-xl transition-all group-hover:text-gray-700 dark:group-hover:text-white" />
             </div>
 
             {/* Text Content */}
             <div className="mt-2 sm:mt-0 sm:ml-4 flex flex-col flex-grow text-start sm:text-left">
-              <h3 className="text-base sm:text-xl lg:text-xl font-semibold">{service.title}</h3>
-              <p className="text-sm sm:text-base lg:text-base text-gray-600 dark:text-gray-300">{service.description}</p>
+              <h3 className="text-base sm:text-xl lg:text-xl font-semibold">
+                {service.title}
+              </h3>
+              <p className="text-sm sm:text-base lg:text-base text-gray-600 dark:text-gray-300">
+                {service.description}
+              </p>
             </div>
 
             {/* Right Arrow */}

@@ -17,10 +17,10 @@ const ProjectsSection = () => {
       <div className="flex-col  pt-2 lg:pt-2 sm:pt-4">
         <div className="flex justify-between sm:mx-6 lg:mx-6 lg:pt-4">
           <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 50 }}
-            animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          ref={ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.3, ease: "easeOut" }}
             className="flex items-center px-4 sm:px-0 lg:px-0 py-1"
           >
             <span

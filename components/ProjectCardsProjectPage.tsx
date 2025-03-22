@@ -22,44 +22,60 @@ interface ProjectCardProps {
 const sampleProjects: ProjectCardProps[] = [
   {
     id: "1",
-    title: "E-Commerce Web Application",
-    description: "An advanced AI-based tool that creates custom images using deep learning algorithms",
+    title: "Musify",
+    description: "A web-based music player for streaming, searching, exploring songs, and creating playlists.",
     technologies: ["Python", "FastAPI", "Next.js"],
     githubUrl: "https://github.com/username/ecommerce-platform",
-    imageUrls: ["/2.PNG", "1.png", "3.PNG","/ecom.jpeg"],
-    videoUrl: "https://www.youtube.com/embed/jpsZNVHsjr4?si=E8BRW75VftsrA_tb",
+    imageUrls: [ "/musify_2.PNG", "/musify_3.PNG",],
+    videoUrl: "https://www.youtube.com/embed/qH4KnJ1SStw?si=drJprgikCePcgx0b",
   },
   {
     id: "2",
-    title: "AI-Powered Image Generator",
-    description: "An advanced AI-based tool that creates custom images using deep learning algorithms.",
+    title: "Payment Tracking App",
+    description: "A payment tracking app to monitor requests, statuses, history, and transaction details.",
     technologies: ["Python", "TensorFlow", "Next.js"],
     githubUrl: "https://github.com/username/ai-image-generator",
-    imageUrls: ["/Capture.PNG"],
-    videoUrl: "/NR PAYMENT TRACKING APP.mp4",
+    imageUrls: ["/nr_payment_1.PNG", "/nr_payment_2.PNG", "/nr_payment_3.PNG", "/nr_payment_4.PNG"],
+    videoUrl: "https://www.youtube.com/embed/pQV4sDJzyA8?si=hDfZHo_GoKSEQqr1",
   },
   {
     id: "3",
-    title: "Task Management System",
-    description: "An advanced AI-based tool that creates custom images using deep learning algorithms",
+    title: "Food Ordering Wesbite",
+    description: "A fast-food ordering platform for seamless browsing, ordering, management, and role-based user access.",
     technologies: ["TypeScript", "React", "Node.js"],
     githubUrl: "https://github.com/username/task-manager",
-    imageUrls: ["/ok.png", "/preview.PNG"],
-    videoUrl: "/videos/ecommerce.mp4",
+    imageUrls: ["/fudo_1.PNG", "/fudo_2.PNG", "/fudo_3.PNG", "/fudo_4.PNG"],
+    videoUrl: "https://www.youtube.com/embed/jpsZNVHsjr4?si=E8BRW75VftsrA_tb",
   },
   {
     id: "4",
-    title: "AI-Powered Audio Transcription",
-    description: "An advanced AI-based tool that creates custom images using deep learning algorithms",
+    title: "Smart Invoice Extraction",
+    description: "An AI-powered system for invoice annotation, data extraction, validation, and storage.",
     technologies: ["Python", "Whisper", "AI"],
     githubUrl: "https://github.com/username/task-manager",
-    imageUrls: ["/Capture.PNG"],
+    imageUrls: ["/invoice_1.PNG", "/invoice_2.PNG", "/invoice_3.PNG"],
     videoUrl: "/videos/ecommerce.mp4",
   },
+  {
+    id: "5",
+    title: "E-Commerce App",
+    description: "A shopping app with fashion products, cart, deals, flash sales, and order tracking.",
+    technologies: ["Python", "Whisper", "AI"],
+    githubUrl: "https://github.com/username/task-manager",
+    imageUrls: ["/1.PNG", "/2.PNG", "/3.PNG"],
+    videoUrl: "/videos/ecommerce.mp4",
+  },
+  {
+    id: "6",
+    title: "Retail Billing System",
+    description: "A user-friendly retail billing system with quick transactions, record-keeping, and Gmail invoicing.",
+    technologies: ["Python", "Whisper", "AI"],
+    githubUrl: "https://github.com/username/task-manager",
+    imageUrls: ["/retail_1.PNG", "/retail_2.PNG"],
+    videoUrl: "/videos/ecommerce.mp4",
+  }, 
 ];
-
-
-
+ 
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   id,
