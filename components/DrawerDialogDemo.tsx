@@ -20,19 +20,15 @@ import { Loader2 } from "lucide-react"; // Import a loading spinner
 interface DrawerDialogDemoProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  videoUrl: string;
+  videoUrl: string; // Keep the same prop name
 }
 
 export function DrawerDialogDemo({ open, onOpenChange, videoUrl }: DrawerDialogDemoProps) {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   const [isLoading, setIsLoading] = React.useState(true); // Track loading state
 
-  const handleVideoLoaded = () => {
-    setIsLoading(false); // Video has loaded
-  };
-
-  const handleVideoError = () => {
-    setIsLoading(false); // Handle error state if needed
+  const handleIframeLoaded = () => {
+    setIsLoading(false); // Iframe has loaded
   };
 
   if (isDesktop) {
@@ -43,21 +39,18 @@ export function DrawerDialogDemo({ open, onOpenChange, videoUrl }: DrawerDialogD
             <DialogTitle>Project Preview</DialogTitle>
           </DialogHeader>
           <div className="w-full h-[300px] sm:h-[400px] lg:h-[400px] relative">
-            {isLoading && ( // Show loading spinner while video is loading
+            {isLoading && ( // Show loading spinner while iframe is loading
               <div className="absolute inset-0 flex items-center justify-center bg-[#1a1a1a]/50">
                 <Loader2 className="h-8 w-8 animate-spin text-white" />
               </div>
             )}
-            <video
-              muted
-              autoPlay
-              className="w-full rounded-sm h-full"
-              onLoadedData={handleVideoLoaded} // Trigger when video is loaded
-              onError={handleVideoError} // Handle errors
-            >
-              <source src={videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe
+              src={videoUrl} // Use the videoUrl prop (YouTube embed URL)
+              className="w-full h-full rounded-sm"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              onLoad={handleIframeLoaded} // Trigger when iframe is loaded
+            />
           </div>
         </DialogContent>
       </Dialog>
@@ -71,21 +64,18 @@ export function DrawerDialogDemo({ open, onOpenChange, videoUrl }: DrawerDialogD
           <DrawerTitle>Project Preview</DrawerTitle>
         </DrawerHeader>
         <div className="w-full h-[40vh] sm:h-[50vh] lg:h-[20vh] px-4 relative">
-          {isLoading && ( // Show loading spinner while video is loading
+          {isLoading && ( // Show loading spinner while iframe is loading
             <div className="absolute inset-0 flex items-center justify-center bg-[#1a1a1a]/50">
               <Loader2 className="h-8 w-8 animate-spin text-white" />
             </div>
           )}
-          <video
-            muted
-            autoPlay
+          <iframe
+            src={videoUrl} // Use the videoUrl prop (YouTube embed URL)
             className="w-full h-full"
-            onLoadedData={handleVideoLoaded} // Trigger when video is loaded
-            onError={handleVideoError} // Handle errors
-          >
-            <source src={videoUrl} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            onLoad={handleIframeLoaded} // Trigger when iframe is loaded
+          />
         </div>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>

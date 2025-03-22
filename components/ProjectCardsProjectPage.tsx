@@ -26,8 +26,8 @@ const sampleProjects: ProjectCardProps[] = [
     description: "An advanced AI-based tool that creates custom images using deep learning algorithms",
     technologies: ["Python", "FastAPI", "Next.js"],
     githubUrl: "https://github.com/username/ecommerce-platform",
-    imageUrls: ["/Capture.PNG", "/ecom.jpeg"],
-    videoUrl: "/vid.mp4",
+    imageUrls: ["/2.PNG", "1.png", "3.PNG","/ecom.jpeg"],
+    videoUrl: "https://www.youtube.com/embed/jpsZNVHsjr4?si=E8BRW75VftsrA_tb",
   },
   {
     id: "2",
@@ -36,7 +36,7 @@ const sampleProjects: ProjectCardProps[] = [
     technologies: ["Python", "TensorFlow", "Next.js"],
     githubUrl: "https://github.com/username/ai-image-generator",
     imageUrls: ["/Capture.PNG"],
-    videoUrl: "/videos/ecommerce.mp4",
+    videoUrl: "/NR PAYMENT TRACKING APP.mp4",
   },
   {
     id: "3",
