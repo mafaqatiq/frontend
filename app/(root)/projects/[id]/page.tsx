@@ -10,35 +10,29 @@ import { motion } from "framer-motion";
 const ProjectPage = () => {
   const { id } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const [hasAnimated, setHasAnimated] = useState(false);
+
   const project = sampleProjects.find((p) => p.id === id);
 
   if (!project) {
     return <div className="text-center text-white">Project not found.</div>;
   }
 
-  const {
-    title,
-    description,
-    technologies,
-    imageUrls = [],
-    githubUrl,
-  } = project;
+  const { title, description, technologies, imageUrls = [], githubUrl } = project;
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % imageUrls.length);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex(
-      (prev) => (prev - 1 + imageUrls.length) % imageUrls.length
-    );
+    setCurrentImageIndex((prev) => (prev - 1 + imageUrls.length) % imageUrls.length);
   };
-  const { ref, inView } = useInView({ triggerOnce: true });
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   if (inView && !hasAnimated) {
     setHasAnimated(true);
   }
+
   return (
     <motion.div
       ref={ref}
