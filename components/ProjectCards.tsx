@@ -10,7 +10,7 @@ const services = [
     title: "Musify",
     description:
       "A web-based music player for streaming, searching, exploring songs, and creating playlists.",
-    imageUrl: "/musify_icon.PNG", // Replace with actual image path
+    imageUrl: "/music_icon.png", // Replace with actual image path
     glow: "shadow-blue-500/50",
   },
   {
