@@ -33,7 +33,7 @@ const ProjectPage = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="dark:selection:bg-[#212121]  selection:bg-slate-400  mx-auto w-[90%] max-w-6xl mb-2 lg:mt-24 mt-20 lg:px-4 sm:px-4 lg:pt-4 sm:pt-4 lg:pb-2 sm:pb-2 px-1 py-2 dark:border-none border rounded-lg backdrop-blur-md dark:bg-[#242124]/50 bg-white"
     >
-      <section className="skills scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-6 mx-2 lg:mx-0 sm:mx-0 sm:mt-14 lg:mt-0 border">
+      <section className="skills scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-2 mx-2 lg:mx-0 sm:mx-0 sm:mt-0 lg:mt-0 border">
         <div className="w-full px-6 py-8 ">
           <div className="flex">
           <h1 className="lg:text-3xl  sm:text-2xl text-xl font-bold mb-2">{title}</h1>
@@ -70,9 +70,9 @@ const ProjectPage = () => {
           </div>
 
           <div className="mt-6">
-          <h1 className="lg:text-2xl  sm:text-xl text-2xl font-bold mb-1">The Problems to Solve</h1>
+          <h1 className="lg:text-2xl  sm:text-xl text-xl font-bold mb-1">The Problems to Solve</h1>
           <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">{problem}</p>
-          <h1 className="lg:text-2xl  sm:text-xl text-2xl font-bold mb-1">Our Solution</h1>
+          <h1 className="lg:text-2xl  sm:text-xl text-xl font-bold mb-1">Our Solution</h1>
           <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">{solution}</p>
             <h2 className="text-xl   font-bold">Technologies Used</h2>
             <ul className="flex gap-2 mt-2 flex-wrap">

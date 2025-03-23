@@ -62,7 +62,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.3, ease: "easeOut" }}
-               className="dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-6 py-4 mx-2 lg:mx-0 sm:mx-0 sm:mt-14 lg:mt-0 border">
+               className="dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-2 py-4 mx-2 lg:mx-0 sm:mx-0 sm:mt-0 lg:mt-0 border">
         {/* Search Bar */}
         <div className="flex items-center px-4 lg:ml-6 sm:ml-6 ml-0 sm:px-0 lg:px-0 py-1">
           <span
