@@ -65,11 +65,11 @@ const Profile = () => {
           {/* Right Side - Image */}
           <div className="lg:w-1/3 flex justify-center mt-2 lg:mt-0">
             <Image
-              src="/profile.png"
+              src="/bg-remove.png"
               alt="Afaq's Profile"
               width={250}
               height={250}
-              className="w-32 h-32 sm:w-60 sm:h-60 lg:w-56 lg:h-56 sm:rounded-2xl rounded-full lg:rounded-full object-cover shadow-lg border-4 border-gray-300 dark:border-gray-600"
+              className="w-32 h-32 sm:w-60 sm:h-60 lg:w-72 lg:h-72 sm:rounded-2xl rounded-full lg:rounded-full object-cover shadow-lg border-4 border-gray-300 dark:border-gray-600"
             />
           </div>
         </div>

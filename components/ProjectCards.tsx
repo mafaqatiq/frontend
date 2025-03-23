@@ -15,7 +15,7 @@ const services = [
   },
   {
     id: "2",
-    title: "Payment Tracker",
+    title: "NR Payment Tracker",
     description:
       "A payment tracking app to monitor requests, statuses, history, and transaction details.",
     imageUrl: "/payment_icon.png", // Replace with actual image path
