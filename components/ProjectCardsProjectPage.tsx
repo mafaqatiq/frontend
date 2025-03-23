@@ -17,6 +17,9 @@ interface ProjectCardProps {
   imageUrls?: string[];
   githubUrl?: string;
   videoUrl?: string;
+  detail?: string;
+  problem?: string;
+  solution?: string;
 }
 
 const sampleProjects: ProjectCardProps[] = [
@@ -26,8 +29,11 @@ const sampleProjects: ProjectCardProps[] = [
     description: "A web-based music player for streaming, searching, exploring songs, and creating playlists.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/username/ecommerce-platform",
-    imageUrls: [ "/musify_2.PNG", "/musify_3.PNG",],
+    imageUrls: [ "/musify_2.PNG", "/musify_3.PNG"],
     videoUrl: "https://www.youtube.com/embed/qH4KnJ1SStw?si=drJprgikCePcgx0b",
+    detail: "Musify is a modern and user-friendly music streaming platform that provides seamless music discovery, search, and playlist creation. Users can explore trending music, create personalized playlists, and enjoy a smooth playback experience with an intuitive interface. Built with Next.js and TypeScript, it ensures high performance and scalability, making it a competitive alternative to mainstream music streaming services.",
+    problem: "Existing music platforms often suffer from cluttered interfaces, intrusive advertisements, and limited personalized features. Users struggle with discovering new music that aligns with their preferences, and many platforms lack efficient playlist management tools. Additionally, slow performance and unoptimized UI can lead to a frustrating user experience.",
+    solution: "Musify solves these issues by offering an intuitive UI, an optimized search algorithm, and smart playlist management. It incorporates fast music retrieval, personalized recommendations, and an ad-free listening experience. The app is lightweight, responsive, and provides users with a smooth music streaming journey without unnecessary distractions.",
   },
   {
     id: "2",
@@ -37,15 +43,21 @@ const sampleProjects: ProjectCardProps[] = [
     githubUrl: "https://github.com/username/ai-image-generator",
     imageUrls: ["/nr_payment_1.PNG", "/nr_payment_2.PNG", "/nr_payment_3.PNG", "/nr_payment_4.PNG"],
     videoUrl: "https://www.youtube.com/embed/pQV4sDJzyA8?si=hDfZHo_GoKSEQqr1",
+    detail: "NR Payment Tracker is a comprehensive solution designed for businesses and freelancers to manage and track payments efficiently. It allows users to create and monitor payment requests, view transaction history, and receive real-time status updates. Built with Python's FastAPI and a Next.js frontend, it offers high-speed processing and a smooth user experience for payment management.",
+    problem: "Manual payment tracking is prone to human errors, missed transactions, and lack of organization. Businesses and freelancers often struggle with keeping records of payments, leading to disputes, financial mismanagement, and delays in receiving payments.",
+    solution: "NR Payment Tracker automates the entire payment tracking process, categorizing transactions and ensuring accurate record-keeping. It integrates real-time notifications for status updates and allows users to generate detailed reports, reducing errors and improving financial transparency.",
   },
   {
     id: "3",
     title: "FUDO",
     description: "A fast-food ordering platform for seamless browsing, ordering, management, and role-based user access.",
-    technologies: ["HTML", "CSS", "JavaScript","Php"],
+    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: ["/fudo_1.PNG", "/fudo_2.PNG", "/fudo_3.PNG", "/fudo_4.PNG"],
     videoUrl: "https://www.youtube.com/embed/jpsZNVHsjr4?si=E8BRW75VftsrA_tb",
+    detail: "FUDO is an online food ordering system designed for fast-food restaurants and takeout businesses. It allows customers to browse the menu, place orders online, and track order status in real-time. The system also includes an admin panel for restaurant owners to manage menu items, orders, and users effectively.",
+    problem: "Many small food businesses lack digital solutions for order management, relying on manual order-taking, which can lead to miscommunication, delays, and operational inefficiencies. Additionally, customers expect a smooth online ordering experience, which many traditional restaurants fail to provide.",
+    solution: "FUDO streamlines the food ordering process by providing an intuitive online platform where customers can easily place and track orders. It features role-based access for customers and administrators, ensuring secure and efficient management of restaurant operations. The system also optimizes order processing, reducing wait times and improving customer satisfaction.",
   },
   {
     id: "4",
@@ -55,6 +67,9 @@ const sampleProjects: ProjectCardProps[] = [
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: ["/invoice_1.PNG", "/invoice_2.PNG", "/invoice_3.PNG"],
     videoUrl: "https://www.youtube.com/embed/zVM24tfqX0A?si=dNhKHg_CV3S8RRyM",
+    detail: "Smart Invoice Extraction is an AI-powered tool designed to automate invoice processing. Using advanced machine learning models, it extracts essential details such as invoice number, date, total amount, and vendor information. The system validates the extracted data, ensuring accuracy before storing it securely in a database.",
+    problem: "Manual invoice processing is inefficient, time-consuming, and error-prone. Businesses dealing with large volumes of invoices struggle to keep up with data entry, leading to financial discrepancies, delayed payments, and administrative burdens.",
+    solution: "Smart Invoice Extraction leverages AI to automate invoice scanning and data extraction, reducing manual effort and eliminating errors. The system ensures seamless validation of invoice data and provides a structured, searchable storage system, significantly improving efficiency and accuracy in financial record-keeping.",
   },
   {
     id: "5",
@@ -64,8 +79,13 @@ const sampleProjects: ProjectCardProps[] = [
     githubUrl: "https://github.com/username/task-manager",
     imageUrls: ["/retail_1.PNG", "/retail_2.PNG"],
     videoUrl: "https://www.youtube.com/embed/cBypXNPfrys?si=aaHX-sN81cpzvAsI",
-  }, 
+    detail: "Retail Billing System is an easy-to-use desktop application that enables small retail stores to process sales transactions efficiently. It includes features like automated invoice generation, customer billing, and real-time record-keeping. The system is built with Python's Tkinter, making it lightweight and fast for daily retail operations.",
+    problem: "Traditional retail stores often rely on manual cash registers or outdated billing systems that do not provide automated record-keeping. This results in slow checkout processes, misplaced transaction records, and errors in calculating total sales.",
+    solution: "Retail Billing System modernizes retail checkout by automating invoice generation and integrating record-keeping features. It supports multiple payment methods and ensures that transaction records are stored securely. Additionally, the system allows invoices to be emailed directly to customers via Gmail, improving efficiency and customer satisfaction.",
+  },
 ];
+
+
  
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
