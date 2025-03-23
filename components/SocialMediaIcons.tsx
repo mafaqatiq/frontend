@@ -19,8 +19,7 @@ export default function SocialButtons() {
     <div className="flex flex-wrap gap-3">
       {/* Fiverr Button */}
       <a
-        href="https://www.fiverr.com/"
-        target="_blank"
+        href="https://www.fiverr.com/zaidbinharis293/" 
         rel="noopener noreferrer"
         data-tooltip-id="fiverr-tooltip"
         className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-green-600 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-green-600 hover:bg-green-500"
@@ -31,8 +30,7 @@ export default function SocialButtons() {
 
       {/* Upwork Button */}
       <a
-        href="https://www.upwork.com/"
-        target="_blank"
+        href="https://www.upwork.com/freelancers/~01c91a1c64736ef715?mp_source=share"
         rel="noopener noreferrer"
         data-tooltip-id="upwork-tooltip"
         className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-[#128f00] dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-[#128f00] hover:bg-[#128f00]/80"
@@ -43,8 +41,7 @@ export default function SocialButtons() {
 
       {/* LinkedIn Button */}
       <a
-        href="https://www.linkedin.com/"
-        target="_blank"
+        href="https://www.linkedin.com/in/muhammad-afaq-3b8820224/" 
         rel="noopener noreferrer"
         data-tooltip-id="linkedin-tooltip"
         className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-blue-600 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-blue-600 hover:bg-blue-500"
@@ -55,8 +52,7 @@ export default function SocialButtons() {
 
       {/* GitHub Button */}
       <a
-        href="https://github.com/"
-        target="_blank"
+        href="https://github.com/mafaqatiq"
         rel="noopener noreferrer"
         data-tooltip-id="github-tooltip"
         className="w-11 h-11 flex items-center hover:border hover:border-black justify-center text-white bg-gray-700 dark:bg-[#373737] border-white/10 shadow-lg rounded-full transition-all duration-300 ease-in-out dark:hover:bg-gray-700 hover:bg-gray-600"
