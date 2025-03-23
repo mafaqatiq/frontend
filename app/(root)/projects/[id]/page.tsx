@@ -1,7 +1,6 @@
 "use client";
 import { useParams } from "next/navigation";
-import { sampleProjects } from "@/components/ProjectCardsProjectPage";
-import { FaGithub } from "react-icons/fa";
+import { sampleProjects } from "@/components/ProjectCardsProjectPage"; 
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -59,7 +58,7 @@ const ProjectPage = () => {
           <div className="relative w-full aspect-w-16 aspect-h-9">
             {videoUrl ? (
               <iframe
-                className="w-full h-[400px] border rounded-xl"
+                className="w-full lg:h-[400px] sm:h-[300px] h-[200px] border rounded-xl"
                 src={videoUrl}
                 title={title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

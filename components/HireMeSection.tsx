@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast"
 
 
 const HireMeSection = () => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref } = useInView({ triggerOnce: true });
   const formRef = useRef<HTMLFormElement>(null);
   const router = useRouter(); // Fix: Ensure this is inside a client component
   const { toast } = useToast(); // Toast function from shadcn
