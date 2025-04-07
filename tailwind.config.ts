@@ -58,17 +58,19 @@ export default {
   		},
 		  keyframes: {
 			'pulse-glow': {
-				'0%, 100%': { boxShadow: '0 0 20px 0px rgba(255, 255, 255, 0.4)' },
-				'50%': { boxShadow: '0 0 20px 8px rgba(255, 255, 255, 0.7)' }
+				'0%, 100%': { boxShadow: '0 0 20px 0px rgba(255, 255, 255, 0.3)' },
+				'50%': { boxShadow: '0 0 20px 8px rgba(255, 255, 255, 0.4)' }
 			}, 
 			'light-pulse-glow': {
   				'0%, 100%': { boxShadow: '0 0 20px 0px rgba(77, 77, 245, 0.6)' },
   				'50%': { boxShadow: '0 0 20px 8px rgba(77, 77, 245, 0.9)' }
-			}
+			},
 		},
 		animation: { 
 			'pulse-glow': 'pulse-glow 3s infinite', 
 			'light-pulse-glow': 'light-pulse-glow 3s infinite', 
+			'card-pulse-glow': 'pulse-glow 3s infinite', 
+			'light-card-pulse-glow': 'light-pulse-glow 3s infinite', 
 		},
   	}
   },
