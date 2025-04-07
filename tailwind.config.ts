@@ -55,7 +55,21 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  keyframes: {
+			'pulse-glow': {
+				'0%, 100%': { boxShadow: '0 0 20px 0px rgba(255, 255, 255, 0.4)' },
+				'50%': { boxShadow: '0 0 20px 8px rgba(255, 255, 255, 0.7)' }
+			}, 
+			'light-pulse-glow': {
+  				'0%, 100%': { boxShadow: '0 0 20px 0px rgba(77, 77, 245, 0.6)' },
+  				'50%': { boxShadow: '0 0 20px 8px rgba(77, 77, 245, 0.9)' }
+			}
+		},
+		animation: { 
+			'pulse-glow': 'pulse-glow 3s infinite', 
+			'light-pulse-glow': 'light-pulse-glow 3s infinite', 
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
