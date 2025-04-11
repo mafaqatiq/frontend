@@ -4,8 +4,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import HireMeSection from "@/components/HireMeSection";
 import TestimonialSection from "@/components/TestimonialSection";
-import FooterSection from "@/components/FooterSection";
-import MouseGlow from "@/components/MouseGlow";
+import FooterSection from "@/components/FooterSection"; 
 
 export default function Home() {
   return (
