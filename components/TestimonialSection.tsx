@@ -154,7 +154,7 @@ const TestimonialSection = () => {
                     key={testimonial.id}
                     className="flex-none w-full sm:w-1/2 lg:w-1/3 px-2"
                   >
-                    <div className="rounded-lg p-6 dark:bg-[#373737] bg-[#ffffff] border shadow-lg h-full flex flex-col justify-between">
+                    <div className="rounded-lg px-6 py-8 sm:p-6 lg:p-6 dark:bg-[#373737] bg-[#ffffff] border shadow-lg h-full flex flex-col justify-between">
                       <div className="relative mb-4">
                         <Quote
                           size={32}

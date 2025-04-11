@@ -5,12 +5,14 @@ import ProjectsSection from "@/components/ProjectsSection";
 import HireMeSection from "@/components/HireMeSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import FooterSection from "@/components/FooterSection";
+import MouseGlow from "@/components/MouseGlow";
 
 export default function Home() {
   return (
     <div
-      className={`dark:selection:bg-[#212121]   selection:bg-slate-400    mx-auto w-[90%] max-w-6xl mb-2 lg:mt-24 mt-20 lg:px-4  sm:px-4 lg:pt-4  sm:pt-4 lg:pb-2  sm:pb-2 px-1 py-2 dark:border-none border rounded-lg backdrop-blur-md dark:bg-[#242124]/50  bg-white `}
+      className={`dark:selection:bg-[#212121]   selection:bg-slate-400    mx-auto w-[90%] max-w-6xl mb-2 lg:mt-24 mt-20 lg:px-4  sm:px-4 lg:pt-4  sm:pt-4 lg:pb-3  sm:pb-2 px-1 py-2 dark:border-none border rounded-lg backdrop-blur-md dark:bg-[#242124]/50  bg-white `}
     >
+      
       <section className="home  scroll-mt-48 max-h-[600px] ">
         <HeroScetion />
       </section>

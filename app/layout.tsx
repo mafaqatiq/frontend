@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import "../styles/fonts.css"; 
 import { ThemeProvider } from "@/components/theme-provider"; 
 import { Toaster } from "@/components/ui/toaster"
+import MouseGlow from "@/components/MouseGlow";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,11 +55,11 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          defaultTheme="dark"
+          enableSystem={false} 
         >
           <Navbar />
+          <MouseGlow />
           {children}
         <Toaster />
         </ThemeProvider>
