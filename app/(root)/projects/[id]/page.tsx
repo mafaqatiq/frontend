@@ -58,7 +58,7 @@ const ProjectPage = () => {
           <div className="relative w-full aspect-w-16 aspect-h-9">
             {videoUrl ? (
               <iframe
-                className="w-full lg:h-[400px] sm:h-[300px] h-[200px] border rounded-xl"
+                className="w-full lg:h-[480px] sm:h-[300px] h-[200px] border rounded-xl"
                 src={videoUrl}
                 title={title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
