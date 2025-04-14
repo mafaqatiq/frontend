@@ -44,8 +44,8 @@ export default function MouseGlow() {
         visible ? "opacity-100 scale-100" : "opacity-0 scale-0"
       }`}
       style={{
-        width: 40,
-        height: 40,
+        width: 30,
+        height: 30,
         borderRadius: "50%",
         opacity: 0.6,
         border: "2px solid gray",

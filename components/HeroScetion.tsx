@@ -109,14 +109,14 @@ const HeroScetion = () => {
                 className="text-center lg:text-left sm:text-left"
               >
                 <h1 className="my-2 text-2xl sm:text-5xl lg:text-8xl font-bold ">
-                  I&apos;m Afaq
+                  I&apos;m <span>Afaq</span>
                 </h1>
                 <p className="lg:text-xl text-sm sm:text-md text-[#5a5959] dark:text-[#b5b5b5] max-w-2xl mx-auto">
                   <span className="hidden sm:inline">
                     Transforming ideas into seamless, innovative,
                     <br /> and immersive digital experiences that inspire.
                   </span>
-                  <span className="sm:hidden">
+                  <span className="sm:hidden ">
                     Transforming ideas into immersive digital experiences.
                   </span>
                 </p>
@@ -165,7 +165,7 @@ const HeroScetion = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex-1 flex justify-center items-center "
           >
-            <div className="lg:my-6 sm:max-w-52 md:dark:animate-pulse-glow md:animate-light-pulse-glow lg:max-w-xs max-w-24 rounded-full dark:bg-[#27272a]  bg-[#5a5959]  flex justify-center items-center overflow-hidden">
+            <div className="lg:my-6 sm:max-w-52 dark:animate-mobile-pulse-glow md:dark:animate-pulse-glow md:animate-light-pulse-glow lg:max-w-xs max-w-24 rounded-full dark:bg-[#27272a]  bg-[#5a5959]  flex justify-center items-center overflow-hidden">
               <Image
                 src="/bg-remove.png"
                 alt="Portfolio"

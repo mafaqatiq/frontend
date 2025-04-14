@@ -9,6 +9,11 @@ export default {
   ],
   theme: {
   	extend: {
+		boxShadow: {
+			'icon-pulse-glow': '0 0 6px 1px rgba(255, 255, 255, 0.3)',
+			'icon-light-pulse-glow': '0 0 6px 1px rgba(39, 39, 42, 0.3)',
+		  },
+
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -62,15 +67,27 @@ export default {
 				'50%': { boxShadow: '0 0 20px 8px rgba(255, 255, 255, 0.4)' }
 			}, 
 			'light-pulse-glow': {
-  				'0%, 100%': { boxShadow: '0 0 20px 0px rgba(77, 77, 245, 0.6)' },
-  				'50%': { boxShadow: '0 0 20px 8px rgba(77, 77, 245, 0.9)' }
-			},
+  			'0%, 100%': { boxShadow: '0 0 20px 0px rgba(39, 39, 42, 0.6)' },
+  			'50%': { boxShadow: '0 0 20px 8px rgba(39, 39, 42, 0.9)' }
+		},
+		'mobile-pulse-glow': {
+  '0%, 100%': { boxShadow: '0 0 10px 0px rgba(255, 255, 255, 0.2)' },
+  '50%': { boxShadow: '0 0 10px 4px rgba(255, 255, 255, 0.3)' }
+},
+'mobile-light-pulse-glow': {
+  '0%, 100%': { boxShadow: '0 0 10px 0px rgba(39, 39, 42, 0.4)' },
+  '50%': { boxShadow: '0 0 10px 4px rgba(39, 39, 42, 0.6)' }
+}
+
+		 
+
+
 		},
 		animation: { 
 			'pulse-glow': 'pulse-glow 3s infinite', 
 			'light-pulse-glow': 'light-pulse-glow 3s infinite', 
-			'card-pulse-glow': 'pulse-glow 3s infinite', 
-			'light-card-pulse-glow': 'light-pulse-glow 3s infinite', 
+			'mobile-pulse-glow': 'mobile-pulse-glow 3s infinite', 
+			'mobile-light-pulse-glow': 'mobile-light-pulse-glow 3s infinite',   
 		},
   	}
   },
