@@ -40,15 +40,16 @@ export default function MouseGlow() {
   return (
     <div
       ref={glowRef}
-      className={`fixed pointer-events-none z-50 transition-opacity duration-300 ease-out ${
+      className={`fixed pointer-events-none lg:block hidden   z-50 transition-opacity duration-300 ease-out ${
         visible ? "opacity-100 scale-100" : "opacity-0 scale-0"
       }`}
       style={{
         width: 40,
         height: 40,
         borderRadius: "50%",
-        background: "rgba(21, 128, 61, 0.2)",
-        boxShadow: "0 0 20px 6px rgba(21, 128, 61, 0.4)",
+        opacity: 0.6,
+        border: "2px solid gray",
+        background: "#27272a", 
       }}
     />
   );
