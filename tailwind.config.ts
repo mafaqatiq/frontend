@@ -77,13 +77,21 @@ export default {
 'mobile-light-pulse-glow': {
   '0%, 100%': { boxShadow: '0 0 10px 0px rgba(39, 39, 42, 0.4)' },
   '50%': { boxShadow: '0 0 10px 4px rgba(39, 39, 42, 0.6)' }
-}
+},
 
-		 
-
+float: {
+    '0%, 100%': { transform: 'translateY(0)' },
+    '50%': { transform: 'translateY(-6px)' },
+  },
+  wiggle: {
+    '0%, 100%': { transform: 'rotate(-2deg)' },
+    '50%': { transform: 'rotate(2deg)' },
+  },
 
 		},
 		animation: { 
+			wiggle: 'wiggle 5s ease-in-out infinite',
+			float: 'float 3s ease-in-out infinite',
 			'pulse-glow': 'pulse-glow 3s infinite', 
 			'light-pulse-glow': 'light-pulse-glow 3s infinite', 
 			'mobile-pulse-glow': 'mobile-pulse-glow 3s infinite', 

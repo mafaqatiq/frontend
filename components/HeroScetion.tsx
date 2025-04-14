@@ -78,7 +78,7 @@ const HeroScetion = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               className="flex items-center lg:px-4 lg:py-1 sm:px-4 sm:py-1 mr-3 rounded-full 
-      sm:dark:bg-green-900 sm:bg-green-700 lg:dark:bg-green-900 lg:bg-green-700 
+      sm:dark:bg-green-900 sm:bg-green-700 lg:dark:bg-green-800 lg:bg-green-600 
       text-green-300 text-sm font-semibold cursor-pointer mt-2"
             >
               <span
@@ -109,7 +109,8 @@ const HeroScetion = () => {
                 className="text-center lg:text-left sm:text-left"
               >
                 <h1 className="my-2 text-2xl sm:text-5xl lg:text-8xl font-bold ">
-                  I&apos;m <span>Afaq</span>
+                  I&apos;m <span className="inline-block animate-float text-green-700">Afaq</span>
+
                 </h1>
                 <p className="lg:text-xl text-sm sm:text-md text-[#5a5959] dark:text-[#b5b5b5] max-w-2xl mx-auto">
                   <span className="hidden sm:inline">
