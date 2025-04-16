@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const stats = [
   { icon: <FaBriefcase />, endVal: 3, label: "Experience" },
-  { icon: <FaCode />, endVal: 12, label: "Skills" },
+  { icon: <FaCode />, endVal: 7, label: "Skills" },
   { icon: <FaFolderOpen />, endVal: 18, label: "Projects" },
-  { icon: <FaHandshake />, endVal: 5, label: "Clients" },
+  { icon: <FaHandshake />, endVal: 25, label: "Clients" },
 ];
 
 const CountSection = () => {
