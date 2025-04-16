@@ -35,7 +35,7 @@ const CountSection = () => {
   }, [inView, hasAnimated]);
 
   return (
-    <div ref={ref} className="flex flex-wrap   gap-3 w-full max-w-6xl mx-auto py-4">
+    <div ref={ref} className="flex flex-wrap   gap-3 w-full max-w-6xl mx-auto py-4 justify-center">
       {stats.map((item, idx) => (
         <motion.div
           key={idx}
