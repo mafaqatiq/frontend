@@ -1,10 +1,9 @@
-import { motion } from "framer-motion"; 
 import { useInView } from "react-intersection-observer";
 import React, { useState } from "react";
 import SkillsCards from "./SkillsCards"; 
 
 const SkillsSection = () => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { inView } = useInView({ triggerOnce: true });
   const [hasAnimated, setHasAnimated] = useState(false);
 
   if (inView && !hasAnimated) {
