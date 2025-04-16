@@ -18,6 +18,7 @@ export default function Home() {
       <section className="skills  scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-6 mx-2 lg:mx-0 sm:mx-0 sm:mt-14 lg:mt-0   border">
         <SkillsSection />
       </section>
+     
       <section className="projects scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-2 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
         <ProjectsSection />
       </section>

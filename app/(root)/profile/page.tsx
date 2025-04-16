@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion"; 
 import HireMeSection from "@/components/HireMeSection";
 import FooterSection from "@/components/FooterSection";
+import CountSection from "@/components/CountSection";
 
 const Profile = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -38,7 +39,7 @@ const Profile = () => {
           {/* Left Side - Text */}
           <div className="lg:w-2/3 sm:mt-6 lg:text-left sm:text-left mt-4 lg:mt-0 pl-4">
             <h2 className="text-2xl lg:text-3xl font-bold text-center sm:text-left lg:text-left text-[#333] dark:text-white">
-              It&apos;s Me, Afaq
+              It&apos;s Me, <span className="text-green-700">Afaq</span>
             </h2>
             <p className="mt-2 text-gray-600 text-center sm:text-left lg:text-left dark:text-gray-300 text-sm sm:text-lg lg:text-lg">
               A passionate software engineer with over four years of experience in building modern web and mobile applications. I specialize in creating scalable, high-performance solutions with clean and maintainable code.
@@ -51,15 +52,17 @@ const Profile = () => {
             <div className="block sm:hidden mt-2 text-gray-600 dark:text-gray-300 text-sm text-center sm:text-left lg:text-left">
               Full-stack web development, mobile application development, desktop application development, web scraping and automation, and AI-driven solutions.
             </div>
+            
 
             {/* Larger Screens: Bullet Points */}
             <ul className="hidden sm:block mt-2 text-gray-600 dark:text-gray-300 text-sm sm:text-lg lg:text-lg list-disc list-inside">
               <li>Full-stack web development</li>
               <li>Mobile application development</li>
-              <li>Desktop application development</li>
-              <li>Web scraping and automation</li>
-              <li>AI-driven solutions</li>
+              <li>Desktop application development</li>  
             </ul>
+            <section className="skills  scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-6 mx-2 lg:mx-0 sm:mx-0 sm:mt-14 lg:mt-2 lg:mb-8    ">
+        <CountSection />
+      </section>
           </div>
 
           {/* Right Side - Image */}
@@ -73,7 +76,9 @@ const Profile = () => {
             />
           </div>
         </div>
+       
       </motion.div>
+     
 
       {/* Hire Me Section */}
       <section className="hire-me scroll-mt-24 dark:bg-[#2c2c2c] bg-white rounded-lg mt-2 pb-0 lg:pb-8 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
@@ -84,6 +89,7 @@ const Profile = () => {
       <section className="dark:bg-[#2c2c2c] bg-white rounded-lg pb-0 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2">
         <FooterSection />
       </section>
+
     </div>
   );
 };
