@@ -48,8 +48,7 @@ export default function MouseGlow() {
         height: 30,
         borderRadius: "50%",
         opacity: 0.6,
-        border: "2px solid gray",
-        background: "#27272a", 
+        border: "2px solid gray", 
       }}
     />
   );
