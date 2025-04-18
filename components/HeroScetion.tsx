@@ -109,7 +109,7 @@ const HeroScetion = () => {
                 className="text-center lg:text-left sm:text-left"
               >
                 <h1 className="my-2 text-2xl sm:text-5xl lg:text-8xl font-bold ">
-                  I&apos;m <span className="md:inline-block md:animate-float text-green-700">Zaid</span>
+                  I&apos;m <span className="md:inline-block md:animate-float text-green-700">Afaq</span>
 
                 </h1>
                 <p className="lg:text-xl text-sm sm:text-md text-[#5a5959] dark:text-[#b5b5b5] max-w-2xl mx-auto">
