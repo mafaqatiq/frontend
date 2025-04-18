@@ -39,7 +39,7 @@ const Profile = () => {
           {/* Left Side - Text */}
           <div className="lg:w-2/3 sm:mt-6 lg:text-left sm:text-left mt-4 lg:mt-0 pl-4">
             <h2 className="text-2xl lg:text-3xl font-bold text-center sm:text-left lg:text-left text-[#333] dark:text-white">
-              It&apos;s Me, <span className="text-green-700">Afaq</span>
+              It&apos;s Me, <span className="text-green-700">Zaid</span>
             </h2>
             <p className="mt-2 text-gray-600 text-center sm:text-left lg:text-left dark:text-gray-300 text-sm sm:text-lg lg:text-lg">
               A passionate software engineer with over four years of experience in building modern web and mobile applications. I specialize in creating scalable, high-performance solutions with clean and maintainable code.
