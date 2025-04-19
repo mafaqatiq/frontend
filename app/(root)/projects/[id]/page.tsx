@@ -1,12 +1,14 @@
 "use client";
 import { useParams } from "next/navigation";
-import { sampleProjects } from "@/components/ProjectCardsProjectPage"; 
+import { sampleProjects } from "@/components/ProjectCardsProjectPage";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import HireMeSection from "@/components/HireMeSection";
+import FooterSection from "@/components/FooterSection";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -19,7 +21,15 @@ const ProjectPage = () => {
     return <div className="text-center text-white">Project not found.</div>;
   }
 
-  const { title, detail, problem, solution, technologies, githubUrl, videoUrl } = project;
+  const {
+    title,
+    detail,
+    problem,
+    solution,
+    technologies,
+    githubUrl,
+    videoUrl,
+  } = project;
 
   if (inView && !hasAnimated) {
     setHasAnimated(true);
@@ -36,23 +46,27 @@ const ProjectPage = () => {
       <section className="skills scroll-mt-24 dark:bg-[#2c2c2c] bg-[#FDFDFD] rounded-lg mt-2 mx-2 lg:mx-0 sm:mx-0 sm:mt-0 lg:mt-0 border">
         <div className="w-full px-6 py-8 ">
           <div className="flex">
-          <h1 className="lg:text-3xl  sm:text-2xl text-xl font-bold mb-2">{title}</h1>
-          {githubUrl && (
-  <Link
-    href={githubUrl as Url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block transition-transform transform hover:-translate-y-0.5 hover:translate-x-0.5"
-  >
-    <ExternalLink
-      className="dark:text-blue-500 ml-.5 text-[#4D4DF5] hover:text-[#4D4DF5]/90"
-      width={16}
-      height={16}
-    />
-  </Link>
-)}
+            <h1 className="lg:text-3xl  sm:text-2xl text-xl font-bold mb-2">
+              {title}
+            </h1>
+            {githubUrl && (
+              <Link
+                href={githubUrl as Url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform transform hover:-translate-y-0.5 hover:translate-x-0.5"
+              >
+                <ExternalLink
+                  className="dark:text-blue-500 ml-.5 text-[#4D4DF5] hover:text-[#4D4DF5]/90"
+                  width={16}
+                  height={16}
+                />
+              </Link>
+            )}
           </div>
-          <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">{detail}</p>
+          <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">
+            {detail}
+          </p>
 
           {/* Embedded YouTube Video */}
           <div className="relative w-full aspect-w-16 aspect-h-9">
@@ -70,22 +84,37 @@ const ProjectPage = () => {
           </div>
 
           <div className="mt-6">
-          <h1 className="lg:text-2xl  sm:text-xl text-xl font-bold mb-1">The Problems to Solve</h1>
-          <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">{problem}</p>
-          <h1 className="lg:text-2xl  sm:text-xl text-xl font-bold mb-1">Our Solution</h1>
-          <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">{solution}</p>
+            <h1 className="lg:text-2xl  sm:text-xl text-xl font-bold mb-1">
+              The Problems to Solve
+            </h1>
+            <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">
+              {problem}
+            </p>
+            <h1 className="lg:text-2xl  sm:text-xl text-xl font-bold mb-1">
+              Our Solution
+            </h1>
+            <p className=" text-sm lg:text-base text-gray-600 dark:text-white  mb-6">
+              {solution}
+            </p>
             <h2 className="text-xl   font-bold">Technologies Used</h2>
             <ul className="flex gap-2 mt-2 flex-wrap">
               {technologies.map((tech, index) => (
-                <li key={index} className="flex text-xs lg:text-sm sm:text-sm items-center gap-2  dark:border-none hover:bg-[#efeeee]  dark:bg-[#484747] text-black border dark:text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 dark:hover:bg-[#585858]">
+                <li
+                  key={index}
+                  className="flex text-xs lg:text-sm sm:text-sm items-center gap-2  dark:border-none hover:bg-[#efeeee]  dark:bg-[#484747] text-black border dark:text-white lg:px-3 px-3 mr-1 sm:m-0 lg:m-0 py-2 my-1 rounded-lg transition-all duration-300 dark:hover:bg-[#585858]"
+                >
                   {tech}
                 </li>
               ))}
             </ul>
           </div>
-
-          
         </div>
+      </section>
+      <section className="hire-me scroll-mt-24 dark:bg-[#2c2c2c] bg-white rounded-lg mt-2 pb-0 lg:pb-8 sm:pb-8 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2 border">
+        <HireMeSection />
+      </section>
+      <section className="dark:bg-[#2c2c2c] bg-white rounded-lg pb-0 mx-2 lg:mx-0 sm:mx-0 sm:mt-2 lg:mt-2">
+        <FooterSection />
       </section>
     </motion.div>
   );
