@@ -9,7 +9,7 @@ import SocialMediaIconsHeroSection from "./SocialMediaIconsHeroSection";
 
 const HeroScetion = () => {
   const [copied, setCopied] = useState(false);
-  const email = "mafaqatiq@email.com";
+  const email = "mafaqatiq@gmail.com";
   const handleCopyEmail = () => {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard
